@@ -8,27 +8,32 @@
     <title>{{ site.title }} | {{ page.title }}</title>
 </head>
 <body>
-    <header class="site-header">
-        <a href="{{ site.baseurl }}">
-            <p class="site-title">{{ site.title }}</p>
-        </a>
-        <a href="{{ site.baseurl }}"><img class="site-logo" src="{{ site.baseurl }}/images/chelidwn-logo.svg" alt=""></a>
-        <p class="site-description">{{ site.description }}</p>
-
-        <nav class="site-nav">
-            <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contributors</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="site-main">
-        <div class="banner">
-
-        </div>
-        {{ content }}
-    </main>
-    <footer class="site-footer"></footer>
+    <div class="site">
+        <header class="site-header">
+            <a href="{{ site.baseurl }}"><img class="site-logo" src="{{ site.baseurl }}/images/chelidwn-logo.svg" alt=""></a>
+            <a class="header-group" href="{{ site.baseurl }}">
+                <p class="site-title">{{ site.title }}</p>
+                <p class="site-description">{{ site.description }}</p>
+            </a>
+    
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contributors</a></li>
+                </ul>
+            </nav>
+            <input class="search" type="search">
+        </header>
+        <main class="site-main">
+            <div class="banner">
+    
+            </div>
+            {{ content }}
+        </main>
+        <footer class="site-footer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio soluta aspernatur corrupti dolor impedit doloribus, molestiae ratione quaerat maiores id tempore, velit sapiente asperiores debitis ducimus aliquid nemo illum sit.</p>
+        </footer>
+    </div>
 </body>
 </html>
