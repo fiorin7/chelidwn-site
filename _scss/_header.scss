@@ -33,7 +33,7 @@
 // navigation
 
 .site-nav {
-    margin-left: auto;
+    margin-left: 2em;
     ul {
         display: flex;
     }
@@ -46,38 +46,44 @@
     }
 }
 
+.subscribe {
+    color: $main-color-dark;
+    background-color: $main-color-light;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    border-radius: 0.4em;
+    text-transform: uppercase;
+}
+
 .search {
-    margin-left: 0.5em;
+    margin-left: auto;
     display: flex;
-}
-
-.search-field {
-    display: block;
-    padding: 0.3em;
-    border: 3px solid $main-color-light;
-    border-right: none;
-    height: 2em;
-    border-radius: 0.4rem 0 0 0.4rem;
-    color: $main-color-dark;
-    outline: none;
-    background-color: $main-color-light;
-    margin-left: 0.5em;
-}
-
-input::placeholder {
-    color: rgba($main-color-dark, 0.5);
-}
-  
-.search-button {
-    display: block;
-    width: 2em;
-    height: 1.4em;
-    border: 1px solid $main-color-light;
-    background-color: $main-color-light;
-    text-align: center;
-    color: $main-color-dark;
-    border-radius: 0 0.4rem 0.4rem 0;
-    cursor: pointer;
-    font-size: 1.44em;
-    outline: none;
+    .search-field {
+        display: block;
+        padding: 0.3em;
+        border: 3px solid $main-color-light;
+        border-right: none;
+        height: 2em;
+        border-radius: 0.4rem 0 0 0.4rem;
+        color: $main-color-dark;
+        outline: none;
+        background-color: $main-color-light;
+        margin-left: 0.5em;
+    }    
+    .search-button {
+        display: block;
+        width: 2em;
+        height: 1.4em;
+        border: 1px solid $main-color-light;
+        background-color: $main-color-light;
+        text-align: center;
+        color: $main-color-dark;
+        border-radius: 0 0.4rem 0.4rem 0;
+        cursor: pointer;
+        font-size: 1.44em;
+        outline: none;
+        &::placeholder {
+            color: rgba($main-color-dark, 0.5);
+        }
+    }
 }
