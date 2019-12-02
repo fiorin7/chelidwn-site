@@ -1,15 +1,38 @@
 .site-header {
     display: flex;
     align-items: center;
-    padding: 1em;
+    padding: 0.7em;
+    background-color: rgb(110, 48, 51);
+    color: white;
 }
 
 .site-title {
-    font-size: 2em;
+    color: rgb(255, 232, 205);
+    font-size: 1.7em;
 }
 
 .site-logo {
-    height: 2.5em;
+    display: block;
+    height: 2em;
     width: auto;
     padding-left: 1em;
+}
+
+.site-description {
+    color: rgb(255, 232, 205);
+}
+
+// navigation
+
+.site-nav {
+    margin-left: auto;
+    ul {
+        display: flex;
+    }
+    li {
+        margin-left: 0.5em;
+    }
+    a {
+        color: rgb(255, 232, 205);
+    }
 }
