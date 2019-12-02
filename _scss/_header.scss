@@ -4,8 +4,6 @@
     padding: 0.7em;
     background-color: $main-color-dark;
     color: white;
-    position: fixed;
-    top: 0; left: 0; right: 0;
 }
 
 .site-title {
@@ -30,6 +28,8 @@
     flex-direction: column;
 }
 
+
+
 // navigation
 
 .site-nav {
@@ -48,4 +48,36 @@
 
 .search {
     margin-left: 0.5em;
+    display: flex;
+}
+
+.search-field {
+    display: block;
+    padding: 0.3em;
+    border: 3px solid $main-color-light;
+    border-right: none;
+    height: 2em;
+    border-radius: 0.4rem 0 0 0.4rem;
+    color: $main-color-dark;
+    outline: none;
+    background-color: $main-color-light;
+    margin-left: 0.5em;
+}
+
+input::placeholder {
+    color: rgba($main-color-dark, 0.5);
+}
+  
+.search-button {
+    display: block;
+    width: 2em;
+    height: 1.4em;
+    border: 1px solid $main-color-light;
+    background-color: $main-color-light;
+    text-align: center;
+    color: $main-color-dark;
+    border-radius: 0 0.4rem 0.4rem 0;
+    cursor: pointer;
+    font-size: 1.44em;
+    outline: none;
 }
