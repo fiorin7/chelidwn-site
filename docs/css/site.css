@@ -23,6 +23,23 @@ html {
 body, form, table, input, textarea, option, select, button {
   font: inherit; }
 
+.about {
+  max-width: 70em;
+  margin: 2em auto; }
+  .about h1, .about h2 {
+    padding: 1em 0 0.5em; }
+  .about p {
+    padding: 0.5em; }
+
+.join {
+  display: inline-block;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  margin-top: 2em;
+  border-radius: 0.4rem;
+  background-color: #6e3033;
+  color: #f3dec6; }
+
 body {
   background-color: #fff7ee; }
 
