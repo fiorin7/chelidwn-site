@@ -25,11 +25,49 @@ body, form, table, input, textarea, option, select, button {
 
 .about {
   max-width: 70em;
+  padding: 0 2em;
   margin: 2em auto; }
   .about h1, .about h2 {
-    padding: 1em 0 0.5em; }
+    padding: 0 0 0.5em; }
   .about p {
-    padding: 0.5em; }
+    padding-bottom: 0.5em; }
+
+.history {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center; }
+  .history-main img {
+    display: block;
+    width: 18em;
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1em rgba(110, 48, 51, 0.7); }
+  .history-main:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .history-buttons {
+    margin-left: 3em;
+    width: 50em; }
+    .history-buttons span {
+      display: block;
+      font-size: 1.3em;
+      padding: 3rem 2rem;
+      background-color: white;
+      min-width: 18rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fffbf6;
+      border-radius: 0.4rem;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); }
+    .history-buttons .button-p {
+      margin-bottom: 1em;
+      background-color: #648d67; }
+    .history-buttons .button-c {
+      background-color: #1d7d81; }
 
 .join {
   display: inline-block;
@@ -41,7 +79,7 @@ body, form, table, input, textarea, option, select, button {
   color: #f3dec6; }
 
 body {
-  background-color: #fff7ee; }
+  background-color: #fffbf6; }
 
 .banner {
   height: 28em;
