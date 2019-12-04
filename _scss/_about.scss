@@ -1,5 +1,5 @@
 .about {
-    max-width: 70em;
+    max-width: 80em;
     padding: 0 2em;
     margin: 2em auto;
     h1 {
@@ -18,7 +18,7 @@
     margin-bottom: 5em;
     &-main {
         img {
-            display: box;
+            display: block;
             width: 18em;
             float: left;
             margin-right: 2em;
@@ -121,7 +121,7 @@
         grid-column: 2 / 4;
         grid-row: 2;
         li{
-            font-size: 1.3em;
+            font-size: 1.1em;
             background-color: $color-green;
             padding: 1em;
             padding-left: 9rem;
@@ -140,10 +140,125 @@
     }
 }
 
+.current-projects {
 .cp-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1.3fr 1fr 0.8fr 1.6fr;
+    grid-gap: 0.7em;
+    li {
+        display: list-item;
+        list-style: circle;
+        list-style-position: inside;
+    }
+    & > div {
+        background-color: $main-color-darker;
+        padding: 1.5em;
+        border-radius: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        &:after {
+            content: "";
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            opacity: 0.5;
+            filter: blur(1.5px);
+        }
+        .card-content {
+            flex-grow: 1;
+            z-index: 10;
+            font-size: 1.1em;
+            text-shadow: 0 0 1em rgba($color: black, $alpha: 1);
+        }
+        a {
+            display: inline-block;
+            border-radius: 0.4rem;
+            background-color: $main-color-light;
+            color: $main-color-dark;
+            padding: 1em 2em;
+            margin-top: 0.5em;
+            z-index: 10;
+            box-shadow: 0 0 1em rgba($color: black, $alpha: 0.1);
+            font-weight: bold;
+        }
+    }
+    h2 {
+        line-height: 1.2;
+        font-size: 1.3em;
+        padding-bottom: 0.8em;
+        text-align: center;
+        z-index: 10;
+    }
+    .search-engine {
+        grid-row: 1 / 3;
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/search-engine.jpg');
+        }
+    }
+    .missing-lemmas {
+        grid-row: 3 / 5;
+        grid-column: 1;
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/lemma.jpg');
+        }
+    }
+    .volunteer-manuscripts {
+        grid-column: 2 / 5;
+        grid-row: 1;
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/ocr.png');
+        }
+    }
+    .scanning {
+        grid-column: 5;
+        grid-row: 1/ 5;
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/scanning.png');
+        }
+    }
+    .aratus {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        .card-content {
+            text-align: center;
+        }
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/aratus.png');
+        }
+    }
+    .caesar {
+        grid-column: 3;
+        grid-row: 2 / 4;
+        .card-content {
+            text-align: center;
+        }
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/caesar.png');
+        }
+    }
+    .illustrations {
+        grid-column: 2 / 4;
+        grid-row: 4;
+        &:after {
+            background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/illustration.png');
+        }
+    }
+    .new-authors {
+        grid-column: 4 / 5;
+        grid-row: 2 / 5;
+        &:after {
+        background-image:  linear-gradient(rgba($color: black, $alpha: 0.5), rgba($color: rgb(26, 26, 26), $alpha: 0.5)), url('../images/authors.png');
+        }
+    }
+}
 }
 
 .join {
@@ -153,5 +268,5 @@
     margin-top: 2em;
     border-radius: 0.4rem;
     background-color: $main-color-dark;
-    color: $main-color-light;
+    color: $main-color-lighter;
 }
