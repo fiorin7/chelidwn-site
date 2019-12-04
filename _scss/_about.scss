@@ -1,7 +1,4 @@
-.about {
-    max-width: 80em;
-    padding: 0 2em;
-    margin: 2em auto;
+.about {  
     h1 {
         padding: 0 3em 0.5em;
         font-size: 2em;
@@ -13,6 +10,9 @@
 }
 
 .history {
+    max-width: 70em;
+    padding: 0 2em;
+    margin: 2em auto;
     display: flex;
     align-items: center;
     margin-bottom: 5em;
@@ -35,7 +35,7 @@
     &-buttons {
         margin-left: 3em;
         width: 50em;
-        span {
+        a {
             display: block;
             font-size: 1.3em;
             padding: 3rem 2rem;
@@ -45,14 +45,33 @@
             text-transform: uppercase;
             color: $main-color-lighter;
             border-radius: 0.4rem;
-            box-shadow: 0 0 1em rgba($color: black, $alpha: 0.3);
+            box-shadow: 0 0 1em rgba($color: black, $alpha: 0.1);
+            position: relative;
+            &:after {
+                content: "";
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                opacity: 0.6;
+                filter: blur(1.5px);
+                display: block;
+                z-index: -1;
+            }
         }
         .button-p {
             margin-bottom: 1em;
-            background-color: $color-green;
+            background-color: rgba($color: $color-green, $alpha: 0.6);
+            &:after {
+                background-image: url('../images/button-p.png');
+            }
         }
         .button-c {
-            background-color: $color-blue;
+            background-color: rgba($color: $color-blue, $alpha: 0.6);
+            &:after {
+                background-image: url('../images/button-c.jpg');
+            }
         }
     }
 }
@@ -98,11 +117,18 @@
 //     }
 // }
 
+.mission-wrapper {
+    background-color: $main-color-dark-lighter;
+    padding: 0.3em 0;
+}
+
 .mission {
     display: grid;
     grid-template-columns: 1.5fr 8em 2fr;
     align-items: center;
     max-width: 70em;
+    padding: 0 2em;
+    margin: 2em auto;
     h1 {
         grid-column: 1 / 4;
     }
@@ -114,7 +140,7 @@
             width: 100%;
             border-radius: 50%;
             padding: 0.1em;
-            background-color: $main-color-lighter;
+            background-color: $main-color-dark-lighter;
         }
     }
     &-list {
@@ -141,6 +167,9 @@
 }
 
 .current-projects {
+    max-width: 80em;
+    padding: 0 2em;
+    margin: 2em auto;
 .cp-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -161,6 +190,7 @@
         position: relative;
         overflow: hidden;
         color: white;
+        box-shadow: 0 0 1em rgba($color: black, $alpha: 0.3);
         &:after {
             content: "";
             display: block;
@@ -262,6 +292,8 @@
 }
 
 .join {
+    padding: 0 2em;
+    margin: 2em 2em 2em 7em;
     display: inline-block;
     font-size: 16px;
     padding: 1rem 2rem;
