@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="site">
+        <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
         <header class="site-header">
             <a href="/chelidwn-site"><img class="site-logo" src="/chelidwn-site/images/chelidwn-logo.svg" alt=""></a>
             <a class="header-group" href="/chelidwn-site">
@@ -16,9 +17,12 @@
                 <p class="site-description">facilitating classical research with modern methods</p>
             </a>
             <div class="search">
-                    <input type="text" class="search-field" placeholder="Search">
-                    <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
-                </div>
+                <input type="text" class="search-field" placeholder="Search">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+            <label for="site-nav-toggle" class="site-nav-label">
+                Menu
+            </label>
             <nav class="site-nav">
                 <ul>
                     <li><a href="/chelidwn-site/about/">About</a></li>

@@ -6,3 +6,32 @@ $main-color-darker: rgb(80, 36, 38);
 $color-blue: rgb(29, 125, 129);
 $main-color-dark-lighter: rgb(190, 173, 175);
 $color-green: rgb(100, 141, 103);
+
+// mix-ins
+$media-query-sizes: (
+    tablet: 1025px,
+    tablet-small: 960px,
+    phone: 768px,
+    phone-smaller: 700px
+);
+    
+@mixin tablet() {
+    @media only screen and (max-width: #{map-get($media-query-sizes, "tablet")}) {
+        @content;
+    }
+}
+@mixin tablet-small() {
+    @media only screen and (max-width: #{map-get($media-query-sizes, "tablet-small")}) {
+        @content;
+    }
+}
+@mixin phone() {
+    @media only screen and (max-width: #{map-get($media-query-sizes, "phone")}) {
+        @content;
+    }
+}
+@mixin phone-smaller() {
+    @media only screen and (max-width: #{map-get($media-query-sizes, "phone")}) {
+        @content;
+    }
+}

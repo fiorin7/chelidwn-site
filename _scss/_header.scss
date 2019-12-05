@@ -4,6 +4,11 @@
     padding: 0.7em;
     background-color: $main-color-dark;
     color: white;
+    position: relative;
+    @include phone-smaller {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .site-title {
@@ -16,6 +21,9 @@
     height: 3em;
     width: auto;
     padding-right: 1em;
+    @include phone-smaller {
+        padding: 0;
+    }
 }
 
 .site-description {
@@ -26,19 +34,60 @@
 .header-group {
     display: flex;
     flex-direction: column;
+    @include phone-smaller {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 
 
 // navigation
+.site-nav-label {
+    display: none;
+    @include tablet {
+        display: block;
+        text-transform: uppercase;
+        color: $main-color-light;
+        margin-left: 0.5em;
+        padding: 0.5em;
+        border-radius: 0.4em;
+        border: 1px solid $main-color-light;
+}
+}
 
 .site-nav {
     margin-left: 2em;
+    @include tablet {
+        display: none;
+        position: absolute;
+        top: 0; right: 0;
+        width: 100%;
+    }
+    
     ul {
         display: flex;
+        @include tablet {
+            display: block;
+            position: absolute;
+            top: 5em; right: 0;
+            background-color: $main-color-dark;
+            z-index: 10;
+        }
+        @include phone-smaller {
+            right: 0; left: 0;
+            top: 11em;
+        }
     }
     li {
         margin-left: 0.5em;
+        @include tablet {
+            padding: 1em;
+        }
+        @include phone-smaller {
+            text-align: center;
+        }
     }
     a {
         color: $main-color-light;
@@ -49,6 +98,18 @@
         &:hover {
             background-color: $main-color-light;
             color: $main-color-dark;
+        }
+    }
+}
+
+.site > .site-nav-toggle {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    @include tablet {
+        &:checked + .site-header .site-nav {
+            display: block;            
         }
     }
 }
@@ -69,6 +130,9 @@
 .search {
     margin-left: auto;
     display: flex;
+    @include phone-smaller {
+        margin: 0;
+    }
     .search-field {
         display: block;
         padding: 0.3em;

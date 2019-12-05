@@ -8,6 +8,9 @@ body {
     height: 28em;
     position: relative;
     margin-bottom: 7em;
+    @include phone {
+        margin-bottom: 28em;
+    }
     &:after {
         content: '';
         background-image: url(https://images.unsplash.com/photo-1565022074377-642f6eb0eca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
@@ -39,6 +42,9 @@ body {
     &-elements {
         display: flex;
         justify-content: space-evenly;
+        @include phone {
+            display: block;
+        }
         .element {
             display: flex;
             flex-direction: column;
@@ -52,6 +58,18 @@ body {
             box-shadow: 0 0 1em rgba($color: $main-color-dark, $alpha: 0.5);
             padding: 1em;
             text-align: center;
+            @include phone {
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                height: 15em;
+                width: 100%;
+                box-shadow: none;
+                border-radius: 0;
+                border-bottom: 1px solid $main-color-dark;
+                justify-content: center;
+                padding: 0.3em;
+            }
             .fas {
                 display: block;
                 font-size: 5em;
@@ -61,6 +79,12 @@ body {
                 color: $main-color-darker;
                 // background-color: gray;
                 // border-radius: 0.4rem;
+                @include phone {
+                    border-bottom: 0;
+                    flex-basis: 30%;
+                    margin: 0;
+                    padding: 0;
+                }
             }
             a {
                 margin-top: 0.6em;
@@ -74,9 +98,18 @@ body {
                 background-color: $main-color-light;
                 color: $main-color-dark;
                 }
+                @include phone {
+                    flex-basis: 100%;
+                    max-width: 20em;
+                    margin: 0 auto;
+                }
             }
             p {
                 flex-grow: 1;
+                @include phone {
+                    flex-grow: 0;
+                    flex-basis: 60%;
+                }
             }
         }
         .dictionaries {
@@ -107,16 +140,25 @@ body {
     padding: 2em 4em;
     margin: 3rem auto;
     max-width: 80em;
+    align-items: center;
+    @include tablet {
+        display: block;
+    }
     &-media {
         position: relative;
         overflow: hidden;
         border-radius: 0.5em;
         box-shadow: 0 0 1em rgba($color: $main-color-dark, $alpha: 1.0);
+        height: 20em;
+        width: 40em;
+        @include tablet {
+            width: 80%;
+            margin: 0 auto 2em;
+        }
         &:after {
             display: block;
             content: "";
-            height: 20em;
-            width: 40em;
+            padding-top: 100%;
         }
         & > img {
             display: block;
@@ -125,12 +167,20 @@ body {
             transform: translate(-50%, -50%);
             height: auto;
             width: 100%;
+            // @include tablet {
+            //     height: 100%;
+            //     width: auto;
+            // }
         }
     }
     &-text {
         width: 20em;
         h1 {
             text-align: center;
+        }
+        @include tablet {
+            width: 80%;
+            margin: 0 auto;
         }
     }
 }
