@@ -43,6 +43,13 @@
     a {
         color: $main-color-light;
         text-transform: uppercase;
+        padding: 0.5em;
+        border-radius: 0.4em;
+        transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+        &:hover {
+            background-color: $main-color-light;
+            color: $main-color-dark;
+        }
     }
 }
 
@@ -53,6 +60,10 @@
     margin-left: 0.5em;
     border-radius: 0.4em;
     text-transform: uppercase;
+    transition: background-color 0.35s ease-in-out;
+    &:hover {
+        background-color: $main-color-lighter;
+    }
 }
 
 .search {

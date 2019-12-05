@@ -7,7 +7,7 @@ body {
 .banner {
     height: 28em;
     position: relative;
-    margin-bottom: 5.5em;
+    margin-bottom: 7em;
     &:after {
         content: '';
         background-image: url(https://images.unsplash.com/photo-1565022074377-642f6eb0eca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
@@ -40,9 +40,11 @@ body {
         display: flex;
         justify-content: space-evenly;
         .element {
-            background-color: white;
-            height: 20em;
-            width: 16em;
+            display: flex;
+            flex-direction: column;
+            background-color: $main-color-lighter;
+            height: 24em;
+            width: 17em;
             position: relative;
             top: 12em; left: 0;
             z-index: 20;
@@ -51,21 +53,36 @@ body {
             padding: 1em;
             text-align: center;
             .fas {
+                display: block;
                 font-size: 5em;
-                // padding: 1.5rem;
+                padding-bottom: 0.7rem;
+                border-bottom: 1px solid black;
+                margin: 0 0.5em 0.3em 0.5em;
+                color: $main-color-darker;
                 // background-color: gray;
                 // border-radius: 0.4rem;
+            }
+            a {
+                margin-top: 0.6em;
+                display: inline-block;
+                padding: 0.5em 1em;
+                background-color: $main-color-darker;
+                border-radius: 0.4rem;
+                color: $main-color-lighter;
+                transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+                &:hover {
+                background-color: $main-color-light;
+                color: $main-color-dark;
+                }
+            }
+            p {
+                flex-grow: 1;
             }
         }
         .dictionaries {
 
         }
     }
-}
-
-footer {
-    height: 5em;
-    background-color: $main-color-dark;
 }
 
 .new-box {
@@ -100,7 +117,6 @@ footer {
             content: "";
             height: 20em;
             width: 40em;
-            background-color: white;
         }
         & > img {
             display: block;
@@ -113,5 +129,24 @@ footer {
     }
     &-text {
         width: 20em;
+        h1 {
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    padding: 2rem 3rem;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    color: $main-color-light;
+    height: 5rem;
+    background-color: $main-color-dark;
+    a {
+        color: inherit;
+    }
+    .fab {
+        margin-right: 0.5em;
     }
 }

@@ -47,6 +47,7 @@
             border-radius: 0.4rem;
             box-shadow: 0 0 1em rgba($color: black, $alpha: 0.1);
             position: relative;
+            transition: transform .35s ease-in-out;
             &:after {
                 content: "";
                 background-position: center;
@@ -58,6 +59,9 @@
                 filter: blur(1.5px);
                 display: block;
                 z-index: -1;
+            }
+            &:hover {
+                transform: scale(1.1);
             }
         }
         .button-p {
@@ -170,6 +174,13 @@
     max-width: 80em;
     padding: 0 2em;
     margin: 2em auto;
+.cp-text {
+    p {
+        font-size: 1.2em;
+        margin-left: 1em;
+        padding-bottom: 1em;
+    }
+}
 .cp-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -218,6 +229,11 @@
             z-index: 10;
             box-shadow: 0 0 1em rgba($color: black, $alpha: 0.1);
             font-weight: bold;
+            transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+            &:hover {
+                background-color: $main-color-dark;
+                color: $main-color-light;
+            }
         }
     }
     h2 {
@@ -301,4 +317,10 @@
     border-radius: 0.4rem;
     background-color: $main-color-dark;
     color: $main-color-lighter;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+    &:hover {
+        background-color: $main-color-light;
+        color: $main-color-dark;
+        box-shadow: 0 0 1em rgba($color: $main-color-dark, $alpha: 1);
+    }
 }

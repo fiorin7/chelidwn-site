@@ -65,7 +65,11 @@ body, form, table, input, textarea, option, select, button {
       color: #fffbf6;
       border-radius: 0.4rem;
       box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-      position: relative; }
+      position: relative;
+      -webkit-transition: -webkit-transform .35s ease-in-out;
+      transition: -webkit-transform .35s ease-in-out;
+      transition: transform .35s ease-in-out;
+      transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out; }
       .history-buttons a:after {
         content: "";
         background-position: center;
@@ -81,6 +85,9 @@ body, form, table, input, textarea, option, select, button {
                 filter: blur(1.5px);
         display: block;
         z-index: -1; }
+      .history-buttons a:hover {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
     .history-buttons .button-p {
       margin-bottom: 1em;
       background-color: rgba(100, 141, 103, 0.6); }
@@ -131,6 +138,10 @@ body, form, table, input, textarea, option, select, button {
   max-width: 80em;
   padding: 0 2em;
   margin: 2em auto; }
+  .current-projects .cp-text p {
+    font-size: 1.2em;
+    margin-left: 1em;
+    padding-bottom: 1em; }
   .current-projects .cp-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -184,7 +195,12 @@ body, form, table, input, textarea, option, select, button {
         margin-top: 0.5em;
         z-index: 10;
         box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-        font-weight: bold; }
+        font-weight: bold;
+        -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+        transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out; }
+        .current-projects .cp-grid > div a:hover {
+          background-color: #6e3033;
+          color: #f3dec6; }
     .current-projects .cp-grid h2 {
       line-height: 1.2;
       font-size: 1.3em;
@@ -252,7 +268,13 @@ body, form, table, input, textarea, option, select, button {
   margin-top: 2em;
   border-radius: 0.4rem;
   background-color: #6e3033;
-  color: #fffbf6; }
+  color: #fffbf6;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, box-shadow 0.35s ease-in-out; }
+  .join:hover {
+    background-color: #f3dec6;
+    color: #6e3033;
+    box-shadow: 0 0 1em #6e3033; }
 
 body {
   background-color: #fffbf6; }
@@ -260,7 +282,7 @@ body {
 .banner {
   height: 28em;
   position: relative;
-  margin-bottom: 5.5em; }
+  margin-bottom: 7em; }
   .banner:after {
     content: '';
     background-image: url(https://images.unsplash.com/photo-1565022074377-642f6eb0eca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
@@ -290,9 +312,14 @@ body {
     -webkit-box-pack: space-evenly;
             justify-content: space-evenly; }
     .banner-elements .element {
-      background-color: white;
-      height: 20em;
-      width: 16em;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      background-color: #fffbf6;
+      height: 24em;
+      width: 17em;
       position: relative;
       top: 12em;
       left: 0;
@@ -302,11 +329,27 @@ body {
       padding: 1em;
       text-align: center; }
       .banner-elements .element .fas {
-        font-size: 5em; }
-
-footer {
-  height: 5em;
-  background-color: #6e3033; }
+        display: block;
+        font-size: 5em;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid black;
+        margin: 0 0.5em 0.3em 0.5em;
+        color: #502426; }
+      .banner-elements .element a {
+        margin-top: 0.6em;
+        display: inline-block;
+        padding: 0.5em 1em;
+        background-color: #502426;
+        border-radius: 0.4rem;
+        color: #fffbf6;
+        -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+        transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out; }
+        .banner-elements .element a:hover {
+          background-color: #f3dec6;
+          color: #6e3033; }
+      .banner-elements .element p {
+        -webkit-box-flex: 1;
+                flex-grow: 1; }
 
 .new-box:nth-of-type(odd) {
   background-color: rgba(110, 48, 51, 0.5); }
@@ -335,8 +378,7 @@ footer {
       display: block;
       content: "";
       height: 20em;
-      width: 40em;
-      background-color: white; }
+      width: 40em; }
     .new-media > img {
       display: block;
       position: absolute;
@@ -348,6 +390,23 @@ footer {
       width: 100%; }
   .new-text {
     width: 20em; }
+    .new-text h1 {
+      text-align: center; }
+
+footer {
+  padding: 2rem 3rem;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  color: #f3dec6;
+  height: 5rem;
+  background-color: #6e3033; }
+  footer a {
+    color: inherit; }
+  footer .fab {
+    margin-right: 0.5em; }
 
 .site-header {
   display: -webkit-box;
@@ -388,7 +447,14 @@ footer {
     margin-left: 0.5em; }
   .site-nav a {
     color: #f3dec6;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 0.5em;
+    border-radius: 0.4em;
+    -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out; }
+    .site-nav a:hover {
+      background-color: #f3dec6;
+      color: #6e3033; }
 
 .subscribe {
   color: #6e3033;
@@ -396,7 +462,11 @@ footer {
   padding: 0.5em;
   margin-left: 0.5em;
   border-radius: 0.4em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out; }
+  .subscribe:hover {
+    background-color: #fffbf6; }
 
 .search {
   margin-left: auto;
