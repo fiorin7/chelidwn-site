@@ -132,9 +132,17 @@ body {
         .new-text {
             margin-right: 5em;
         }
+    .new:not(.new-dictionary) {
+        img {
+            @include phone-smaller {
+            height: 100%;
+            width: auto;
+            }
+        }
     }
-
 }
+}
+
 .new {
     display: flex;
     padding: 2em 4em;
