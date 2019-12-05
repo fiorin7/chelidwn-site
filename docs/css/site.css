@@ -147,6 +147,9 @@ body, form, table, input, textarea, option, select, button {
       color: #fffbf6; }
       .mission-list li:nth-child(odd) {
         padding-left: 7.5rem; }
+      @media only screen and (max-width: 768px) {
+        .mission-list li {
+          padding-left: 1em; } }
 
 .current-projects {
   max-width: 80em;
