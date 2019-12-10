@@ -68,6 +68,7 @@
     
     ul {
         display: flex;
+        align-items: center;
         @include tablet {
             display: block;
             position: absolute;
@@ -79,25 +80,61 @@
             right: 0; left: 0;
             top: 11em;
         }
+        & ul {
+            display: none;
+            background-color: $main-color-dark;
+            position: absolute;
+            top: 1.4em; left: -0.8em;
+            min-width: 100%;
+            padding: 1em;
+            border-radius: 0.4rem;
+            li {
+                &:first-of-type {
+                    margin-bottom: 0.6em;
+                }
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
     }
     li {
         margin-left: 0.5em;
+        position: relative;
         @include tablet {
             padding: 1em;
         }
         @include phone-smaller {
             text-align: center;
         }
+        &:hover {
+            & > ul {
+                display: block;
+                z-index: 40;
+            }
+        }
     }
     a {
         color: $main-color-light;
         text-transform: uppercase;
         padding: 0.5em;
+    }
+
+    & > ul > li {
+        & > a {
         border-radius: 0.4em;
         transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
-        &:hover {
+            &:hover {
             background-color: $main-color-light;
             color: $main-color-dark;
+            }
+        }
+        &:nth-of-type(2) > a {
+            position: relative;
+            cursor: pointer;
+            z-index: 60;
         }
     }
 }
