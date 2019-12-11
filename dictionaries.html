@@ -19,7 +19,17 @@ Dictionaries
             </div>
 
             <div class="dictionary-main">
-                
+                {% for dictionary in languages.dictionaries %}
+                    <div class="dict-main-item" style="background-image: url('{{ dictionary.image }}')">
+                        <div class="dict-data">
+                            {% for data in dictionary.dictionary_data %}
+                                {% for item in data %}
+                                    <p class="{{ item[0] }}">{{ item[1] }}</p>
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
              
         </div>
