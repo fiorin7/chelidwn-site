@@ -5,3 +5,23 @@ permalink: /dictionaries/
 ---
 
 Dictionaries
+<div class="dictionaries">
+    {% for languages in site.data.dictionaries %}
+        <div class="dictionary-box">
+            <h2>{{ languages.language }}</h2>
+            
+            <div class="buttons">
+                    {% for dictionary in languages.dictionaries %}
+                        <div class="button">
+                            <h3 class="{{ dictionary.dictionary_name | slugify }}">{{ dictionary.dictionary_name }}</h3>
+                        </div>
+                    {% endfor %}  
+            </div>
+
+            <div class="dictionary-main">
+                
+            </div>
+             
+        </div>
+    {% endfor %}
+</div>

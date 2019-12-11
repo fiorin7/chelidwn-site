@@ -84,7 +84,7 @@
             display: none;
             background-color: $main-color-dark;
             position: absolute;
-            top: 1.4em; left: -0.8em;
+            top: 1.4em; left: -1.5em;
             min-width: 100%;
             padding: 1em;
             border-radius: 0.4rem;
@@ -93,8 +93,10 @@
                     margin-bottom: 0.6em;
                 }
                 a {
+                    transition: color 0.2s ease-in;
                     &:hover {
                         text-decoration: underline;
+                        color: $main-color-lighter;
                     }
                 }
             }

@@ -587,14 +587,18 @@ footer {
       background-color: #6e3033;
       position: absolute;
       top: 1.4em;
-      left: -1em;
+      left: -1.5em;
       min-width: 100%;
       padding: 1em;
       border-radius: 0.4rem; }
       .site-nav ul ul li:first-of-type {
         margin-bottom: 0.6em; }
-      .site-nav ul ul li a:hover {
-        text-decoration: underline; }
+      .site-nav ul ul li a {
+        -webkit-transition: color 0.2s ease-in;
+        transition: color 0.2s ease-in; }
+        .site-nav ul ul li a:hover {
+          text-decoration: underline;
+          color: #fffbf6; }
   .site-nav li {
     margin-left: 0.5em;
     position: relative; }
@@ -684,3 +688,10 @@ footer {
       color: rgba(110, 48, 51, 0.5); }
     .search .search-button::placeholder {
       color: rgba(110, 48, 51, 0.5); }
+
+.dictionaries .buttons {
+  display: -webkit-box;
+  display: flex; }
+  .dictionaries .buttons .button {
+    padding: 0.5em;
+    background-color: lightblue; }

@@ -1,0 +1,39 @@
+- language: Latin
+  dictionaries:
+    - dictionary_name: 'One'
+      project_data:
+        - start: start-date 1
+        - end: end-date 1
+        - team_size: 10
+        - institutions: institution 1
+      dictionary_data:
+        - author: author 1
+        - year: year 1
+        - lemma-count: entry-count 1
+        - page_count: page-count 1
+        - image: https://cdn.cnn.com/cnnnext/dam/assets/191024091949-02-foster-cat-large-169.jpg
+
+    - dictionary_name: 'Two'
+      project_data:
+        - start: start-date 2
+        - end: end-date 2
+        - team_size: 80
+        - institutions: institution 2
+      dictionary_data:
+        - author: author 2
+        - year: year 2
+        - lemma-count: entry-count 2
+        - page_count: page-count 2
+
+    - dictionary_name: 'Three'
+      project_data:
+        - start: start-date 3
+        - end: end-date 3
+        - team_size: 803
+        - institutions: institution 3
+      dictionary_data:
+        - author: author 3
+        - year: year 3
+        - lemma-count: entry-count 3
+        - page_count: page-count 3
+
