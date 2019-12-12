@@ -5,67 +5,57 @@ permalink: /dictionaries/
 ---
 
 Dictionaries
-<div class="dictionaries">
+<div class="page-dictionaries">
     {% for languages in site.data.dictionaries %}
-        <div class="dictionary-box">
-            <h2>{{ languages.language }}</h2>
-            
-            <div class="buttons">
+        <div class="dictionary-wrapper">
+            <h2 class="language">{{ languages.language }}</h2>
+            <div class="dictionary-box">
+                
+                <div class="buttons">
+                        {% for dictionary in languages.dictionaries %}
+                            <div class="button">
+                                <label for="{{ dictionary.dictionary_name | slugify }}-toggle" class="{{ dictionary.dictionary_name | slugify }}-label">{{ dictionary.dictionary_name }}</label>
+                            </div>
+                        {% endfor %}  
+                </div>
+    
+                <div class="dictionary-main">
                     {% for dictionary in languages.dictionaries %}
-                        <div class="button">
-                            <label for="{{ dictionary.dictionary_name | slugify }}-toggle" class="{{ dictionary.dictionary_name | slugify }}-label">{{ dictionary.dictionary_name }}</label>
-                        </div>
-                    {% endfor %}  
-            </div>
-
-            <div class="dictionary-main">
-                {% for dictionary in languages.dictionaries %}
-                    {% if forloop.first %}
-                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle" checked>
-                    {% else %}
-                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle">
-                    {% endif %}
-                    <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
-                        <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict">
-                            <div class="dict-data">
-                                {% for data in dictionary.dictionary_data %}
-                                    {% for item in data %}
-                                        <p class="{{ item[0] }}">{{ item[1] }}</p>
+                        {% if forloop.first %}
+                            <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle-{{ languages.language | slugify }}" checked>
+                        {% else %}
+                            <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle-{{ languages.language | slugify }}">
+                        {% endif %}
+                        <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
+                            <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict">
+                                <div class="dict-data">
+                                    {% for data in dictionary.dictionary_data %}
+                                        {% for item in data %}
+                                            <div class="info-pair {{ item[0] }}">
+                                                <p class="data-key">{{ item[0] | replace: '_', ' ' }}</p>
+                                                <p class="data-value">{{ item[1] }}</p>
+                                            </div>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="dict-image-item {{ dictionary.dictionary_name | slugify }}-image">
+                                <img src="{{ dictionary.image }}" alt="">
+                            </div>
+                            <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
+                                {% for proj_data in dictionary.project_data %}
+                                    {% for proj_item in proj_data %}
+                                        <div class="info-pair {{ proj_item[0] }}">
+                                            <p class="data-key">{{ proj_item[0] | replace: '_', ' ' }}</p>
+                                            <p class="data-value">{{ proj_item[1] }}</p>
+                                        </div>
                                     {% endfor %}
                                 {% endfor %}
                             </div>
                         </div>
-                        <div class="dict-image-item {{ dictionary.dictionary_name | slugify }}-image">
-                            <img src="{{ dictionary.image }}" alt="">
-                        </div>
-                        <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
-                            {% for proj_data in dictionary.project_data %}
-                                {% for proj_item in proj_data %}
-                                    <p class="{{ proj_item[0] }}">{{ proj_item[1] }}</p>
-                                {% endfor %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-
-            <!-- <div class="project-data">
-                {% for dictionary in languages.dictionaries %}
-                    {% if forloop.first %}
-                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="proj-show-toggle" checked>
-                    {% else %}
-                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="proj-dict-show-toggle">
-                    {% endif %}
-                    <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
-                        {% for proj_data in dictionary.project_data %}
-                            {% for proj_item in proj_data %}
-                                <p class="{{ proj_item[0] }}">{{ proj_item[1] }}</p>
-                            {% endfor %}
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-            </div> -->
-             
         </div>
     {% endfor %}
 </div>
