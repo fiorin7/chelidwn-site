@@ -13,14 +13,19 @@ Dictionaries
             <div class="buttons">
                     {% for dictionary in languages.dictionaries %}
                         <div class="button">
-                            <h3 class="{{ dictionary.dictionary_name | slugify }}">{{ dictionary.dictionary_name }}</h3>
+                            <label for="{{ dictionary.dictionary_name | slugify }}-toggle" class="{{ dictionary.dictionary_name | slugify }}-label">{{ dictionary.dictionary_name }}</label>
                         </div>
                     {% endfor %}  
             </div>
 
             <div class="dictionary-main">
                 {% for dictionary in languages.dictionaries %}
-                    <div class="dict-main-item" style="background-image: url('{{ dictionary.image }}')">
+                    {% if forloop.first %}
+                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle" checked>
+                    {% else %}
+                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle">
+                    {% endif %}
+                    <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}" style="background-image: url('{{ dictionary.image }}')">
                         <div class="dict-data">
                             {% for data in dictionary.dictionary_data %}
                                 {% for item in data %}
