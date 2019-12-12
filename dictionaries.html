@@ -6,12 +6,10 @@ permalink: /dictionaries/
 
 <div class="page-dictionaries">
     <div class="page-info">
+        <div class="page-info-logo">
+            <img src="{{ site.baseurl }}/images/circle-logo.png" alt="">
+        </div>
         <div class="page-info-wrapper">
-            <div class="page-info-general">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa consequatur, minus totam error eligendi soluta ipsam placeat? Nemo ea, deserunt beatae vel dolorum excepturi a sed eaque quaerat qui autem.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, officiis incidunt illum minus quidem ad provident sunt sit dolores necessitatibus impedit cum, tempore repellendus veniam in natus cumque nesciunt iusto!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, explicabo delectus? Labore, ea inventore rerum similique facere quae dolor laboriosam eius ab doloribus vel consectetur ipsa voluptate nam illo. Molestiae!</p>
-            </div>
             <div class="page-info-languages">
                 <h2>Currently we have dictionaries in the following languages:</h2>
                 <ul>
@@ -22,61 +20,90 @@ permalink: /dictionaries/
                     <li><a href="">KHGksahd - KHDShsadf</a></li>
                 </ul>
             </div>
+            <div class="page-info-general">
+                <div class="dict-banner-text">
+                    <i class="fas fa-book"></i>
+                    <p>Our collection of over 20 fully digitized dictionaries with over 6000 lemmas in total.</p>
+                </div>
+                <div class="dict-banner-text">
+                    <i class="fas fa-search"></i>
+                    <p>The dictionaries are provided with a search engine, supporting search in three alphabets.</p>
+                </div>
+                <div class="dict-banner-text">
+                    <i class="fas fa-lock-open"></i>
+                    <p>Each dictionary can be accessed after you log in with your institution's e-mail address.</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="dictionary-wrapper">
+    <div class="dictionary-wrapper">       
         {% for languages in site.data.dictionaries %}
-                <div class="dictionary-box">
-                    <h2 class="language">{{ languages.language }}</h2>
-                    <div class="buttons">
-                            {% for dictionary in languages.dictionaries %}
-                                <div class="button">
-                                    <label for="{{ dictionary.dictionary_name | slugify }}-toggle" class="{{ dictionary.dictionary_name | slugify }}-label">{{ dictionary.dictionary_name }}</label>
-                                </div>
-                            {% endfor %}  
-                    </div>
-        
-                    <div class="dictionary-main">
+            <div class="dictionary-box">
+                <h2 class="language">{{ languages.language }}</h2>
+                <div class="buttons">
                         {% for dictionary in languages.dictionaries %}
-                            {% if forloop.first %}
-                                <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle-{{ languages.language | slugify }}" checked>
-                            {% else %}
-                                <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle-{{ languages.language | slugify }}">
-                            {% endif %}
-                            <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
-                                <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict">
-                                    <div class="dict-data">
-                                        {% for data in dictionary.dictionary_data %}
-                                            {% for item in data %}
-                                                <div class="info-pair {{ item[0] }}">
-                                                    <p class="data-key">{{ item[0] | replace: '_', ' ' }}</p>
-                                                    <p class="data-value">{{ item[1] }}</p>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                                <div class="dict-image-item {{ dictionary.dictionary_name | slugify }}-image">
-                                    <img src="{{ dictionary.image }}" alt="">
-                                </div>
-                                <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
-                                    {% for proj_data in dictionary.project_data %}
-                                        {% for proj_item in proj_data %}
-                                            <div class="info-pair {{ proj_item[0] }}">
-                                                <p class="data-key">{{ proj_item[0] | replace: '_', ' ' }}</p>
-                                                <p class="data-value">{{ proj_item[1] }}</p>
+                            <div class="button">
+                                <label for="{{ dictionary.dictionary_name | slugify }}-toggle" class="{{ dictionary.dictionary_name | slugify }}-label">{{ dictionary.dictionary_name }}</label>
+                            </div>
+                        {% endfor %}  
+                </div>
+    
+                <div class="dictionary-main">
+                    {% for dictionary in languages.dictionaries %}
+                        {% if forloop.first %}
+                            <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle-{{ languages.language | slugify }}" checked>
+                        {% else %}
+                            <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle-{{ languages.language | slugify }}">
+                        {% endif %}
+                        <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
+                            <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict">
+                                <div class="dict-data">
+                                    {% for data in dictionary.dictionary_data %}
+                                        {% for item in data %}
+                                            <div class="info-pair {{ item[0] }}">
+                                                <p class="data-key">{{ item[0] | replace: '_', ' ' }}</p>
+                                                <p class="data-value">{{ item[1] }}</p>
                                             </div>
                                         {% endfor %}
                                     {% endfor %}
                                 </div>
                             </div>
-                        {% endfor %}
-                    </div>
+                            <div class="dict-image-item {{ dictionary.dictionary_name | slugify }}-image">
+                                <img src="{{ dictionary.image }}" alt="">
+                            </div>
+                            <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
+                                {% for proj_data in dictionary.project_data %}
+                                    {% for proj_item in proj_data %}
+                                        <div class="info-pair {{ proj_item[0] }}">
+                                            <p class="data-key">{{ proj_item[0] | replace: '_', ' ' }}</p>
+                                            <p class="data-value">{{ proj_item[1] }}</p>
+                                        </div>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
+            </div>
         {% endfor %}
     </div>
     <aside class="dictionary-sidebar">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum sint, magni architecto quos iste similique rerum? Repudiandae iure consectetur voluptatum provident maiores, omnis dolore ipsam deserunt rem error voluptates quod.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, suscipit eius. Magnam iste ducimus dolorem repellendus, veritatis voluptatum quia eveniet quod quam tempora natus rerum nihil! Ad at cupiditate qui?
+        <div class="sources">
+            <h3>The sources</h3>
+            <p>The collection consists mostly of digitized copyright-free works.</p>
+            <p>The physical copies of many of them were donated by various libraries and institutions.</p>
+            <p>Some of our copies were so old that they were falling apart. We had to work on restoring the books themselves first.</p>
+        </div>
+        <div class="team">
+            <h3>The team</h3>
+            <p>Students, dogs, professors and software engineers came todether to make these works more accessible.</p>
+            <p>With small exceptions neither of them accepted any monetary reward for their labor. They were happy to work for just one vafla Borovets a day.</p>
+        </div>
+        <div class="help">
+            <h3>Donations</h3>
+            <p>The maintenance of the corpus is only possible through out reader's donations.</p>
+            <p>They pay both for the servers and for the human labor needed to keep our site up to date.</p>
+            <p>We kindly ask you do donate some small sum, if possible, to help us keep up.</p>
+        </div>
     </aside>
 </div>

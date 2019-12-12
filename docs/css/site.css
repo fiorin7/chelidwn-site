@@ -699,24 +699,76 @@ footer {
   background-image: url(https://images.unsplash.com/photo-1565022074377-642f6eb0eca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  position: relative; }
+  .page-info:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8; }
+  .page-info .page-info-logo {
+    z-index: 20;
+    position: relative; }
+    .page-info .page-info-logo img {
+      width: 10em;
+      height: auto;
+      display: block;
+      margin: 0 auto; }
   .page-info .page-info-wrapper {
     max-width: 70em;
+    z-index: 20;
     display: -webkit-box;
     display: flex;
     margin: 0 auto;
-    padding: 2em;
+    padding: 0 2em 1em;
     -webkit-box-align: center;
             align-items: center;
     -webkit-box-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    position: relative; }
     .page-info .page-info-wrapper .page-info-languages {
-      background-color: rgba(67, 122, 161, 0.9);
+      background-color: rgba(67, 122, 161, 0.7);
       padding: 1em;
-      border-radius: 0.3em;
-      color: white; }
+      border-radius: 0.5em;
+      color: white;
+      max-width: 20em;
+      text-align: center; }
+      .page-info .page-info-wrapper .page-info-languages h2 {
+        font-size: 1.2em;
+        margin-bottom: 0.3em; }
       .page-info .page-info-wrapper .page-info-languages a {
         color: white; }
+    .page-info .page-info-wrapper .page-info-general {
+      display: -webkit-box;
+      display: flex;
+      max-width: 50em;
+      font-style: italic;
+      margin-left: 3em; }
+      .page-info .page-info-wrapper .page-info-general .dict-banner-text {
+        margin-left: 1.5em;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
+        color: white;
+        width: 33%; }
+      .page-info .page-info-wrapper .page-info-general .fas {
+        font-size: 1.5em;
+        margin-bottom: 0.4em; }
+      .page-info .page-info-wrapper .page-info-general p {
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        text-shadow: 0.4em 0.4em 0.3em black; }
 
 .page-dictionaries .buttons {
   display: -webkit-box;
@@ -725,7 +777,8 @@ footer {
           justify-content: center;
   font-size: 1.3em;
   width: 100%;
-  background-color: #6e3033; }
+  background-color: #6e3033;
+  border-radius: 0.2em; }
   .page-dictionaries .buttons .button {
     padding: 0.2em 0.5em;
     color: #fffbf6;
@@ -734,22 +787,32 @@ footer {
 
 .dictionary-wrapper {
   -webkit-box-flex: 1;
-          flex: 1; }
+          flex: 1;
+  margin: 0 2em; }
 
 .dictionary-box {
   min-width: 40em;
   max-width: 60em;
-  margin: 2em auto;
-  border-radius: 0.2em;
-  overflow: hidden;
+  margin: 3em auto;
+  border-radius: 0.3em;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  border: 0.5px solid rgba(110, 48, 51, 0.2);
-  background-color: #fffcf9; }
+  background-color: #fffcf9;
+  position: relative;
+  left: 5em; }
 
 .language {
-  width: 100%;
+  display: inline-block;
   text-align: center;
-  color: #6e3033; }
+  color: #6e3033;
+  position: absolute;
+  top: -1.3em;
+  left: 0.3em;
+  border-radius: 0.2em;
+  background-color: #437aa1;
+  z-index: 10;
+  padding: 0.3em 0.5em;
+  color: #fffbf6;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); }
 
 .dictionary-main {
   font-size: 1.2em;
@@ -814,4 +877,15 @@ footer {
       height: 100%; }
 
 .dictionary-sidebar {
-  flex-basis: 20%; }
+  flex-basis: 30%;
+  background-color: #437aa1; }
+  .dictionary-sidebar > div {
+    margin: 2em 1em 2em 5em;
+    text-align: center;
+    max-width: 20em;
+    padding: 1.5em;
+    border-radius: 0.4em;
+    color: white; }
+    .dictionary-sidebar > div h3 {
+      margin-bottom: 0.5em;
+      border-bottom: 0.1em solid white; }
