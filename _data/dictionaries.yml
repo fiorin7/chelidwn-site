@@ -5,7 +5,7 @@
       project_data:
         - start: start-date 1
         - end: end-date 1
-        - team_size: 10
+        - team_size: 10 people
         - institutions: institution 1
       dictionary_data:
         - author: author 1
@@ -18,7 +18,7 @@
       project_data:
         - start: start-date 2
         - end: end-date 2
-        - team_size: 80
+        - team_size: 80 people
         - institutions: institution 2
       dictionary_data:
         - author: author 2
@@ -31,7 +31,7 @@
       project_data:
         - start: start-date 3
         - end: end-date 3
-        - team_size: 803
+        - team_size: 803 people
         - institutions: institution 3
       dictionary_data:
         - author: author 3

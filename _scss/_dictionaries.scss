@@ -1,6 +1,14 @@
+.dictionary-box {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
 .dictionaries {
     .buttons {
         display: flex;
+        justify-content: center;
+        font-size: 1.3em;
         .button {
             padding: 0.5em;
             background-color: lightblue;
@@ -20,7 +28,6 @@
 }
 
 
-
 .dict-show-toggle {
     display: block;
     position: absolute;
@@ -30,6 +37,22 @@
 
 .dict-show-toggle:checked {
     & + .dict-main-item {
-        opacity: 1;
+        opacity: 1; 
+    }
+}
+
+.dict-main-item {
+    display: flex;
+    .dict-data-item,
+    .proj-data-item {
+        flex-grow: 1;
+    }
+    .dict-data-item {
+        flex-basis: 60%;
+    }
+    .proj-data-item {
+        flex-basis: 40%;
+        margin-left: 1em;
+        background-color: yellow
     }
 }

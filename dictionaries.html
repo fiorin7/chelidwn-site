@@ -25,17 +25,43 @@ Dictionaries
                     {% else %}
                         <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle">
                     {% endif %}
-                    <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}" style="background-image: url('{{ dictionary.image }}')">
-                        <div class="dict-data">
-                            {% for data in dictionary.dictionary_data %}
-                                {% for item in data %}
-                                    <p class="{{ item[0] }}">{{ item[1] }}</p>
+                    <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
+                        <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict" style="background-image: url('{{ dictionary.image }}')">
+                            <div class="dict-data">
+                                {% for data in dictionary.dictionary_data %}
+                                    {% for item in data %}
+                                        <p class="{{ item[0] }}">{{ item[1] }}</p>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
+                            {% for proj_data in dictionary.project_data %}
+                                {% for proj_item in proj_data %}
+                                    <p class="{{ proj_item[0] }}">{{ proj_item[1] }}</p>
                                 {% endfor %}
                             {% endfor %}
                         </div>
                     </div>
                 {% endfor %}
             </div>
+
+            <!-- <div class="project-data">
+                {% for dictionary in languages.dictionaries %}
+                    {% if forloop.first %}
+                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="proj-show-toggle" checked>
+                    {% else %}
+                        <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="proj-dict-show-toggle">
+                    {% endif %}
+                    <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
+                        {% for proj_data in dictionary.project_data %}
+                            {% for proj_item in proj_data %}
+                                <p class="{{ proj_item[0] }}">{{ proj_item[1] }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div> -->
              
         </div>
     {% endfor %}
