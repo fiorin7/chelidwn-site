@@ -5,6 +5,7 @@
 }
 
 .dictionaries {
+    font-size: 1.2em;
     .buttons {
         display: flex;
         justify-content: center;
@@ -46,13 +47,22 @@
     .dict-data-item,
     .proj-data-item {
         flex-grow: 1;
+        flex-basis: 30%;
+        width: 30%;
     }
     .dict-data-item {
-        flex-basis: 60%;
+        margin-right: 1em;
+        background-color: red;
     }
     .proj-data-item {
-        flex-basis: 40%;
         margin-left: 1em;
         background-color: yellow
+    }
+    .dict-image-item {
+        width: 40%;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }

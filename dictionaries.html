@@ -26,7 +26,7 @@ Dictionaries
                         <input type="radio" id="{{ dictionary.dictionary_name | slugify }}-toggle" class="dict-show-toggle" name="dict-show-toggle">
                     {% endif %}
                     <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
-                        <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict" style="background-image: url('{{ dictionary.image }}')">
+                        <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict">
                             <div class="dict-data">
                                 {% for data in dictionary.dictionary_data %}
                                     {% for item in data %}
@@ -34,6 +34,9 @@ Dictionaries
                                     {% endfor %}
                                 {% endfor %}
                             </div>
+                        </div>
+                        <div class="dict-image-item {{ dictionary.dictionary_name | slugify }}-image">
+                            <img src="{{ dictionary.image }}" alt="">
                         </div>
                         <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
                             {% for proj_data in dictionary.project_data %}
