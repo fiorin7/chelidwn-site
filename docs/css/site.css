@@ -689,37 +689,70 @@ footer {
     .search .search-button::placeholder {
       color: rgba(110, 48, 51, 0.5); }
 
-.dictionary-wrapper {
-  background-color: #beadaf; }
-
-.dictionary-box {
-  max-width: 60em;
-  margin: 0 auto 2em;
-  padding: 2em; }
-
 .page-dictionaries {
-  font-size: 1.2em; }
-  .page-dictionaries .buttons {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+
+.page-info {
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1565022074377-642f6eb0eca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .page-info .page-info-wrapper {
+    max-width: 70em;
     display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    font-size: 1.3em;
-    margin-bottom: 0.2em;
-    width: 100%; }
-    .page-dictionaries .buttons .button {
-      padding: 0.2em 0.5em;
-      background-color: #6e3033;
-      color: #fffbf6;
-      margin-left: 0.2em;
-      border-radius: 0.2em; }
+    margin: 0 auto;
+    padding: 2em;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    .page-info .page-info-wrapper .page-info-languages {
+      background-color: rgba(67, 122, 161, 0.9);
+      padding: 1em;
+      border-radius: 0.3em;
+      color: white; }
+      .page-info .page-info-wrapper .page-info-languages a {
+        color: white; }
+
+.page-dictionaries .buttons {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-size: 1.3em;
+  width: 100%;
+  background-color: #6e3033; }
+  .page-dictionaries .buttons .button {
+    padding: 0.2em 0.5em;
+    color: #fffbf6;
+    margin-left: 0.2em;
+    border-radius: 0.2em; }
+
+.dictionary-wrapper {
+  -webkit-box-flex: 1;
+          flex: 1; }
+
+.dictionary-box {
+  min-width: 40em;
+  max-width: 60em;
+  margin: 2em auto;
+  border-radius: 0.2em;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  border: 0.5px solid rgba(110, 48, 51, 0.2);
+  background-color: #fffcf9; }
 
 .language {
   width: 100%;
   text-align: center;
-  margin-bottom: 0.5em; }
+  color: #6e3033; }
 
 .dictionary-main {
+  font-size: 1.2em;
   position: relative;
   height: 15em; }
   .dictionary-main .dict-main-item {
@@ -743,10 +776,11 @@ footer {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 0.5em 0 0.5em; }
   .dict-main-item .dict-data-item,
   .dict-main-item .proj-data-item {
-    width: 28%;
+    width: 30%;
     padding: 1em;
     display: -webkit-box;
     display: flex;
@@ -755,6 +789,9 @@ footer {
             flex-direction: column;
     justify-content: space-around;
     border-radius: 0.2rem; }
+    .dict-main-item .dict-data-item .info-pair,
+    .dict-main-item .proj-data-item .info-pair {
+      margin-bottom: 0.3em; }
     .dict-main-item .dict-data-item .data-key,
     .dict-main-item .dict-data-item .data-value,
     .dict-main-item .proj-data-item .data-key,
@@ -762,20 +799,19 @@ footer {
       text-align: center; }
     .dict-main-item .dict-data-item .data-key,
     .dict-main-item .proj-data-item .data-key {
-      background-color: rgba(255, 255, 255, 0.5); }
+      background-color: rgba(110, 48, 51, 0.2); }
       .dict-main-item .dict-data-item .data-key::first-letter,
       .dict-main-item .proj-data-item .data-key::first-letter {
         text-transform: capitalize; }
-  .dict-main-item .dict-data-item {
-    background-color: #f3dec6; }
-  .dict-main-item .proj-data-item {
-    background-color: #f3dec6; }
   .dict-main-item .dict-image-item {
-    width: 40%;
     overflow: hidden;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-    border-radius: 0.2em; }
+    border-radius: 0.2em;
+    width: 40%; }
     .dict-main-item .dict-image-item img {
       display: block;
       width: auto;
       height: 100%; }
+
+.dictionary-sidebar {
+  flex-basis: 20%; }
