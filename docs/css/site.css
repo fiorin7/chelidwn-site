@@ -889,3 +889,148 @@ footer {
     .dictionary-sidebar > div h3 {
       margin-bottom: 0.5em;
       border-bottom: 0.1em solid white; }
+
+.page-translations img {
+  width: 10em; }
+
+.translations-box.greek {
+  max-width: 75em;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 0.4fr 0.8fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.8fr 0.7fr 0.7fr;
+  grid-gap: 1em;
+  margin: 5em auto; }
+  .translations-box.greek > div {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); }
+  .translations-box.greek .lang-section .lang-sec-logo {
+    overflow: hidden;
+    position: relative;
+    bottom: 3em;
+    margin: auto;
+    border-radius: 50%;
+    width: 14em;
+    height: 14em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+    background-color: #437aa1; }
+    .translations-box.greek .lang-section .lang-sec-logo img {
+      width: auto;
+      height: 100%; }
+  .translations-box.greek .author {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; }
+    .translations-box.greek .author:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3); }
+  .translations-box.greek h3,
+  .translations-box.greek .years {
+    text-align: center;
+    z-index: 10; }
+  .translations-box.greek h3 {
+    background-color: #6e3033;
+    padding: 0.2em 0;
+    color: white;
+    text-transform: uppercase; }
+  .translations-box.greek .years {
+    margin: 0.1em 0 0.8em;
+    background-color: rgba(255, 255, 255, 0.8); }
+  .translations-box.greek ul {
+    margin: 0 auto 0.5em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding: 0 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-box-pack: center;
+            justify-content: center;
+    background-color: rgba(243, 222, 198, 0.3);
+    display: none; }
+  .translations-box.greek li {
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: 0.3em; }
+    .translations-box.greek li:last-of-type {
+      margin-bottom: 0; }
+    .translations-box.greek li p {
+      display: inline-block; }
+  .translations-box.greek li:before {
+    display: inline-block;
+    content: "\00BB";
+    margin-right: 0.2em; }
+  .translations-box.greek .lang-section {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2; }
+  .translations-box.greek .timeline-authors {
+    grid-column: 1;
+    grid-row: 1 / 6; }
+  .translations-box.greek .lysias {
+    grid-column: 2 / 4;
+    grid-row: 4 / 6; }
+  .translations-box.greek .homer {
+    grid-column: 6;
+    grid-row: 3; }
+  .translations-box.greek .plato {
+    grid-column: 5;
+    grid-row: 1 / 4; }
+  .translations-box.greek .lucian {
+    grid-column: 2 / 5;
+    grid-row: 2 / 4; }
+  .translations-box.greek .herodotus {
+    grid-column: 5;
+    grid-row: 5; }
+  .translations-box.greek .sophocles {
+    grid-column: 4  / 6;
+    grid-row: 4; }
+    .translations-box.greek .sophocles ul {
+      width: 100%;
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; }
+      .translations-box.greek .sophocles ul li {
+        flex-basis: 30%;
+        width: 30%; }
+  .translations-box.greek .aristophanes {
+    grid-column: 6;
+    grid-row: 4 / 6; }
+  .translations-box.greek .euripides {
+    grid-column: 2;
+    grid-row: 1; }
+  .translations-box.greek .aeschylus {
+    grid-column: 6;
+    grid-row: 1 / 3; }
+  .translations-box.greek .hippocrates {
+    grid-column: 4;
+    grid-row: 5; }

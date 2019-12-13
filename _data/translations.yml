@@ -1,0 +1,98 @@
+- language: Greek
+  lang_image: https://upload.wikimedia.org/wikipedia/commons/6/62/Greek_letter_omega_white.svg
+  lang_info: 8th century BC - 2nd century BC
+  authors:
+    - author_name: 'Homer'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: ca. 8th century BC
+      works:
+        - Iliad
+        - Odyssey
+
+    - author_name: 'Lysias'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: c. 445 BC – c. 380 BC
+      works:
+        - On the Murder of Eratosthenes
+        - Defense in the Matter of the Olive Stump
+        - Against Eratosthenes
+        - Against Agoratus
+        - On the Property of Aristophanes
+        - On the Refusal of a Pension
+        - Against Epicrates and his Fellow-Envoys
+
+    - author_name: 'Plato'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: 428/427 or 424/423 – 348/347 BC
+      works:
+        - Apology
+        - Charmides
+        - Euthyphro
+        - Gorgias
+        - Protagoras
+        - Timaeus
+        - Phaedo
+        - Phaedrus
+        - Republic
+        - Symposium
+        - Theaetetus
+
+    - author_name: 'Lucian'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: c. 125 – after 180 AD
+      works:
+        - The Dead Come to Life or The Fisherman
+        - The Double Indictment or Trials by Jury
+        - The Dream or Lucian's Career
+        - The Judgement of the Goddesses
+        - Menippus or The Descent Into Hades
+        - A Professor of Public Speaking
+        - The Goddesse of Surrye
+
+    - author_name: 'Herodotus'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: c. 484 – c. 425 BC
+      works:
+        - Histories
+
+    - author_name: 'Sophocles'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: c. 497/6 – winter 406/5 BC
+      works:
+        - Ajax
+        - Antigone
+        - Oedipus Rex
+
+    - author_name: 'Aristophanes'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: ca. 446 – ca. 386 BC
+      works:
+        - The Clouds
+        - The Wasps
+        - The Birds
+        - Lysistrata 
+        - The Acharnians
+        - The Frogs
+        - The Knights
+
+    - author_name: 'Euripides'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: ca. 480 – 406 BC
+      works:
+        - Medea
+        - Hippolytus
+
+    - author_name: 'Aeschylus'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: c. 525/524 – c. 456/455 BC
+      works:
+        - Prometheus Bound
+        - Seven against Thebes
+        - The Suppliants
+        - Agamemnon
+
+    - author_name: 'Hippocrates'
+      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      years: c. 460 – c. 370 BC
+      works:
+        - Hippocratic Oath
