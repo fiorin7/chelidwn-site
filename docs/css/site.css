@@ -637,18 +637,6 @@ footer {
     .site > .site-nav-toggle:checked + .site-header .site-nav {
       display: block; } }
 
-.subscribe {
-  color: #6e3033;
-  background-color: #f3dec6;
-  padding: 0.5em;
-  margin-left: 0.5em;
-  border-radius: 0.4em;
-  text-transform: uppercase;
-  -webkit-transition: background-color 0.35s ease-in-out;
-  transition: background-color 0.35s ease-in-out; }
-  .subscribe:hover {
-    background-color: #fffbf6; }
-
 .search {
   margin-left: auto;
   display: -webkit-box;
@@ -689,6 +677,65 @@ footer {
       color: rgba(110, 48, 51, 0.5); }
     .search .search-button::placeholder {
       color: rgba(110, 48, 51, 0.5); }
+
+.login {
+  position: relative; }
+  .login .login-box {
+    max-width: 15em;
+    display: none;
+    background-color: #fffbf6;
+    position: absolute;
+    top: 2.5em;
+    left: -15em;
+    z-index: 1000;
+    border: 1px solid #6e3033;
+    border-radius: 0.4em;
+    box-shadow: 0 0 1em rgba(110, 48, 51, 0.5); }
+  .login .login-form {
+    padding: 1em; }
+    .login .login-form input[type=email],
+    .login .login-form input[type=password] {
+      display: block;
+      margin-bottom: 0.6em;
+      padding: 0.2em;
+      border: none;
+      outline: none;
+      box-shadow: 0;
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s; }
+      .login .login-form input[type=email]:focus,
+      .login .login-form input[type=password]:focus {
+        box-shadow: 0 0.3em 2px -2px rgba(110, 48, 51, 0.5); }
+    .login .login-form h3 {
+      color: black;
+      border-bottom: 1px solid black;
+      margin-bottom: 0.5em;
+      color: #502426; }
+    .login .login-form .login-button {
+      display: inline-block;
+      padding: 0.3em 0.7em;
+      border-radius: 0.4em;
+      background-color: #502426;
+      color: #fffbf6;
+      cursor: pointer; }
+  .login .login-form-toggle {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none; }
+    .login .login-form-toggle:checked + .login-box {
+      display: block; }
+  .login .login-form-label {
+    color: #6e3033;
+    background-color: #f3dec6;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    border-radius: 0.4em;
+    text-transform: uppercase;
+    -webkit-transition: background-color 0.35s ease-in-out;
+    transition: background-color 0.35s ease-in-out; }
+    .login .login-form-label:hover {
+      background-color: #fffbf6; }
 
 .page-dictionaries {
   display: -webkit-box;
@@ -1088,3 +1135,78 @@ footer {
       margin-left: 0.5em;
       margin-bottom: 0.3em;
       border-radius: 0.3em 0 0 0.3em; }
+
+.page-contributors .group {
+  padding: 2em; }
+
+.page-contributors .group:nth-child(even) {
+  background-color: rgba(110, 48, 51, 0.5);
+  color: white; }
+  .page-contributors .group:nth-child(even) .status {
+    color: #d5eeff; }
+
+.page-contributors .group-content {
+  max-width: 70em;
+  margin: 0 auto; }
+  .page-contributors .group-content h2 {
+    text-align: center;
+    margin: 0 auto 1.5em;
+    max-width: 20em;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor; }
+  .page-contributors .group-content ul {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .page-contributors .group-content ul li {
+      flex-basis: 23%;
+      margin-bottom: 2em;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center; }
+      .page-contributors .group-content ul li h3 {
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 0.1em;
+        padding: 0.5em 1em 0;
+        border-radius: 0.2em;
+        font-weight: 100; }
+      .page-contributors .group-content ul li .status {
+        color: #2b5f85;
+        width: 100%;
+        padding: 0 1em;
+        margin-bottom: 0.5em;
+        font-size: 1.2em;
+        font-style: italic;
+        text-align: left; }
+  .page-contributors .group-content .member-media {
+    position: relative;
+    bottom: -0.3em;
+    overflow: hidden;
+    border: 2px solid white;
+    min-width: 15em;
+    max-width: 17em;
+    border-radius: 0.4em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    padding: 1em; }
+    .page-contributors .group-content .member-media:after {
+      content: "";
+      display: block;
+      padding-bottom: 150%; }
+    .page-contributors .group-content .member-media img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      height: auto;
+      width: 100%; }

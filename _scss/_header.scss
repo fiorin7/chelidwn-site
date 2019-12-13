@@ -153,19 +153,6 @@
     }
 }
 
-.subscribe {
-    color: $main-color-dark;
-    background-color: $main-color-light;
-    padding: 0.5em;
-    margin-left: 0.5em;
-    border-radius: 0.4em;
-    text-transform: uppercase;
-    transition: background-color 0.35s ease-in-out;
-    &:hover {
-        background-color: $main-color-lighter;
-    }
-}
-
 .search {
     margin-left: auto;
     display: flex;
@@ -200,4 +187,71 @@
             color: rgba($main-color-dark, 0.5);
         }
     }
+}
+
+.login {
+    position: relative;
+    .login-box {
+        max-width: 15em;
+        display: none;
+        background-color: $main-color-lighter;
+        position: absolute;
+        top: 2.5em; left: -15em;
+        z-index: 1000;
+        border: 1px solid $main-color-dark;
+        border-radius: 0.4em;
+        box-shadow: 0 0 1em rgba($main-color-dark, 0.5);
+    }
+    .login-form {
+        padding: 1em;
+        input[type=email],
+        input[type=password] {
+            display: block;
+            margin-bottom: 0.6em;
+            padding: 0.2em;
+            border: none;
+            outline: none;
+            box-shadow: 0;
+            transition: box-shadow 0.3s;
+            &:focus {
+                box-shadow: 0 0.3em 2px -2px rgba($main-color-dark, 0.5);
+            }
+        }
+        h3 {
+            color: black;
+            border-bottom: 1px solid black;
+            margin-bottom: 0.5em;
+            color: $main-color-darker;
+        }
+        .login-button {
+            display: inline-block;
+            padding: 0.3em 0.7em;
+            border-radius: 0.4em;
+            background-color: $main-color-darker;
+            color: $main-color-lighter;
+            cursor: pointer;
+        }
+    }
+    .login-form-toggle {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        pointer-events: none;
+        &:checked + .login-box {
+            display: block;
+        }
+    }
+    .login-form-label {
+        color: $main-color-dark;
+        background-color: $main-color-light;
+        padding: 0.5em;
+        margin-left: 0.5em;
+        border-radius: 0.4em;
+        text-transform: uppercase;
+        transition: background-color 0.35s ease-in-out;
+        &:hover {
+            background-color: $main-color-lighter;
+        }
+    }
+    
 }

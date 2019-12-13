@@ -18,7 +18,7 @@
             </a>
             <div class="search">
                 <input type="text" class="search-field" placeholder="Search">
-                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                <button onclick="loginAlertSearch()" type="submit" class="search-button"><i class="fa fa-search"></i></button>
             </div>
             <label for="site-nav-toggle" class="site-nav-label">
                 Menu
@@ -32,10 +32,21 @@
                             <li><a href="/chelidwn-site/translations/">Translations</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Contributors</a></li>
+                    <li><a href="/chelidwn-site/contributors/">Contributors</a></li>
                 </ul>
             </nav>
-            <a class="subscribe" href="#">Subscribe</a>
+            <div class="login">
+                <label for="login-form-toggle" class="login-form-label">login</label>
+                <input type="checkbox" id="login-form-toggle" class="login-form-toggle">
+                <div class="login-box">
+                    <form action="login" class="login-form">
+                            <h3>Log in</h3>
+                            <input type="email" id="email" placeholder="E-mail">
+                            <input type="password" id="password" placeholder="Password">
+                            <span class="login-button" onclick="loginAlert()">Log in</span>
+                    </form>
+                </div>
+            </div>
         </header>
         <main class="site-main">
             <style type="text/css" media="screen">
@@ -65,5 +76,13 @@
             <p>All rights reserved. 2002 - 2019</p>
         </footer>
     </div>
+    <script>
+        function loginAlert() {
+            alert("Wrong e-mail or password.");
+        }
+        function loginAlertSearch() {
+            alert("Please log in with your institution's e-mail to access our database.");
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+- group: Tech
+  members:
+    - member_name: Petar Penchev
+      status: Back-End
+      photo: images/boy1.jpg
+    - member_name: Matiu Goliam
+      status: Back-End
+      photo: images/boy2.jpg
+    - member_name: Kaloian Zutev
+      status: Design
+      photo: images/boy3.jpg
+    - member_name: Nemo Neminem
+      status: Front-End
+      photo: images/boy4.jpg
+
+- group: Humanities
+  members:
+    - member_name: Matusek Dinosaurov
+      status: Prehistoric Antiquities
+      photo: images/boy2.jpg
+    - member_name: Dianetta Zuteva
+      status: Latin & Ancient Greek
+      photo: images/girl2.jpg
+    - member_name: Fanka Fankova
+      status: Ancient Art
+      photo: images/girl1.jpg
+    - member_name: Alessando Scieneno
+      status: Old Latin
+      photo: images/boy1.jpg
+    - member_name: Leander Tzatzikis
+      status: Ancient Greek Culture
+      photo: images/boy4.jpg
+    - member_name: Nutella Chocoladova
+      status: Roman Culture
+      photo: images/girl3.jpg
+    - member_name: Lagoena Pocula
+      status: Theory of Translations
+      photo: images/girl4.jpg
+    - member_name: Menander Iulius
+      status: Lexicology
+      photo: images/boy3.jpg
+
+- group: Marketing & Sales
+  members:
+    - member_name: Ramon Gozi
+      status: Marketing
+      photo: images/boy4.jpg
+    - member_name: Rumen Zigger
+      status: Social Media
+      photo: images/boy1.jpg
+    - member_name: Zigu Romenadette
+      status: Sales
+      photo: images/boy2.jpg

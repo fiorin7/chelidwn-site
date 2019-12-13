@@ -1,0 +1,26 @@
+---
+layout: main
+title: Contributors
+permalink: /contributors/
+---
+
+<div class="page-contributors">
+    {% for con_entry in site.data.contributors %}
+        <div class="group {{ con_entry.group | slugify }}">
+            <div class="group-content {{ con_entry.group | slugify }}">
+                <h2>{{ con_entry.group }}</h2>
+                {% for member in con_entry.members %}
+                    {% if forloop.first %}<ul>{% endif %}
+                        <li>
+                            <div class="member-media">
+                                <img src="{{ site.baseurl }}/{{ member.photo }}" alt="">
+                            </div>
+                            <h3>{{ member.member_name }}</h3>
+                            <p class="status">{{ member.status }}</p>
+                        </li>
+                    {% if forloop.last %}</ul>{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
