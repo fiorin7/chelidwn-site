@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 * {
@@ -894,9 +895,9 @@ footer {
   width: 10em; }
 
 .translations-box.greek {
-  max-width: 75em;
+  max-width: 65em;
   display: grid;
-  grid-template-columns: 0.7fr 1fr 0.4fr 0.8fr 1fr 1fr;
+  grid-template-columns: 0.8fr 1fr 0.4fr 0.8fr 1fr 1fr;
   grid-template-rows: 0.5fr 0.5fr 0.8fr 0.7fr 0.7fr;
   grid-gap: 1em;
   margin: 5em auto; }
@@ -908,19 +909,36 @@ footer {
             flex-direction: column;
     border-radius: 0.3em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); }
-  .translations-box.greek .lang-section .lang-sec-logo {
-    overflow: hidden;
+  .translations-box.greek .lang-section {
     position: relative;
-    bottom: 3em;
-    margin: auto;
-    border-radius: 50%;
-    width: 14em;
-    height: 14em;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
-    background-color: #437aa1; }
-    .translations-box.greek .lang-section .lang-sec-logo img {
-      width: auto;
-      height: 100%; }
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.8); }
+    .translations-box.greek .lang-section .lang-sec-logo {
+      overflow: hidden;
+      position: relative;
+      bottom: 3em;
+      margin: 0 auto 1em;
+      border-radius: 50%;
+      width: 14em;
+      height: 14em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+      background-color: #437aa1; }
+      .translations-box.greek .lang-section .lang-sec-logo img {
+        width: auto;
+        height: 100%; }
+    .translations-box.greek .lang-section .lang-section-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      .translations-box.greek .lang-section .lang-section-info p {
+        text-align: center; }
+        .translations-box.greek .lang-section .lang-section-info p:first-of-type {
+          font-size: 1.5em;
+          color: #502426;
+          font-weight: bold;
+          background-color: #f3dec6; }
+        .translations-box.greek .lang-section .lang-section-info p:nth-of-type(2) {
+          color: #6e3033; }
   .translations-box.greek .author {
     display: -webkit-box;
     display: flex;
@@ -941,7 +959,11 @@ footer {
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.3); }
+      background-color: rgba(0, 0, 0, 0.5); }
+    .translations-box.greek .author:hover ul {
+      opacity: 1;
+      -webkit-transform: translate(0);
+              transform: translate(0); }
   .translations-box.greek h3,
   .translations-box.greek .years {
     text-align: center;
@@ -952,10 +974,10 @@ footer {
     color: white;
     text-transform: uppercase; }
   .translations-box.greek .years {
-    margin: 0.1em 0 0.8em;
+    margin: 0.1em 0 2em;
     background-color: rgba(255, 255, 255, 0.8); }
   .translations-box.greek ul {
-    margin: 0 auto 0.5em;
+    margin: 0 auto;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -969,12 +991,21 @@ footer {
     left: 0;
     -webkit-box-pack: center;
             justify-content: center;
-    background-color: rgba(243, 222, 198, 0.3);
-    display: none; }
+    background-color: rgba(243, 222, 198, 0.8);
+    opacity: 0;
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    -webkit-transition: opacity 0.6s ease-in-out, -webkit-transform 0.6s;
+    transition: opacity 0.6s ease-in-out, -webkit-transform 0.6s;
+    transition: opacity 0.6s ease-in-out, transform 0.6s;
+    transition: opacity 0.6s ease-in-out, transform 0.6s, -webkit-transform 0.6s;
+    color: #502426;
+    z-index: 20; }
   .translations-box.greek li {
     display: -webkit-box;
     display: flex;
-    margin-bottom: 0.3em; }
+    margin-bottom: 0.3em;
+    font-size: 1.1em; }
     .translations-box.greek li:last-of-type {
       margin-bottom: 0; }
     .translations-box.greek li p {
@@ -982,7 +1013,8 @@ footer {
   .translations-box.greek li:before {
     display: inline-block;
     content: "\00BB";
-    margin-right: 0.2em; }
+    margin-right: 0.2em;
+    color: #502426; }
   .translations-box.greek .lang-section {
     grid-column: 3 / 5;
     grid-row: 1 / 2; }
@@ -1020,8 +1052,8 @@ footer {
       -webkit-box-direction: normal;
               flex-direction: row; }
       .translations-box.greek .sophocles ul li {
-        flex-basis: 30%;
-        width: 30%; }
+        flex-basis: 33%;
+        width: 33%; }
   .translations-box.greek .aristophanes {
     grid-column: 6;
     grid-row: 4 / 6; }
@@ -1034,3 +1066,25 @@ footer {
   .translations-box.greek .hippocrates {
     grid-column: 4;
     grid-row: 5; }
+
+.timeline-authors {
+  overflow: hidden; }
+  .timeline-authors h3 {
+    margin-bottom: 1em; }
+  .timeline-authors .t-years {
+    border-left: 1px solid #6e3033;
+    margin-left: 0.7em; }
+    .timeline-authors .t-years span {
+      display: block; }
+    .timeline-authors .t-years .century:before {
+      content: "⦿";
+      position: relative;
+      left: -0.5em;
+      color: #6e3033; }
+    .timeline-authors .t-years .t-author {
+      padding: 0.3em;
+      background-color: #6e3033;
+      color: white;
+      margin-left: 0.5em;
+      margin-bottom: 0.3em;
+      border-radius: 0.3em 0 0 0.3em; }

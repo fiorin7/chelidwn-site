@@ -50,7 +50,7 @@ permalink: /translations/
                     </div>
                 </div>
                 {% for author in text_lang.authors %}
-                    <div class="author {{ author.author_name | slugify }}" style="background-image: url('{{ author.image }}');">
+                    <div class="author {{ author.author_name | slugify }}" style="background-image: url({{ site.baseurl }}/{{ author.image }});">
                         <h3>{{ author.author_name }}</h3>
                         <p class="years">{{ author.years }}</p>
                         {% for work in author.works %}
@@ -61,7 +61,29 @@ permalink: /translations/
                     </div>
                 {% endfor %}
                 <div class="timeline-authors">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis modi facere fugiat alias facilis laudantium aliquid asperiores nihil quasi quaerat molestiae dolorem nobis, dolore suscipit! Molestiae porro numquam quas?</p>
+                    <h3>Timeline</h3>
+                    <div class="t-years">
+                        <span class="century">8th century BC</span>
+                        <span class="t-author">Homer</span>
+                        <span class="century">7th century BC</span>
+                        <span class="century">6th century BC</span>
+                        <span class="t-author">Aeschylus</span>
+                        <span class="century">5th century BC</span>
+                        <span class="t-author">Herodotus</span>
+                        <span class="t-author">Sophocles</span>
+                        <span class="t-author">Euripides</span>
+                        <span class="t-author">Hippocrates</span>
+                        <span class="t-author">Lysias</span>
+                        <span class="t-author">Plato</span>
+                        <span class="t-author">Aristophanes</span>
+                        <span class="century">4th century BC</span>
+                        <span class="century">3rd century BC</span>
+                        <span class="century">2nd century BC</span>
+                        <span class="century">1st century BC</span>
+                        <span class="century">1st century AD</span>
+                        <span class="century">2nd century AD</span>
+                        <span class="t-author">Lucian</span>
+                    </div>
                 </div>
             </div>
         {% endfor %} 

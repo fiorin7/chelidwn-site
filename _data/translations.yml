@@ -3,14 +3,14 @@
   lang_info: 8th century BC - 2nd century BC
   authors:
     - author_name: 'Homer'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/homer.jpg
       years: ca. 8th century BC
       works:
         - Iliad
         - Odyssey
 
     - author_name: 'Lysias'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/lysias.jpg
       years: c. 445 BC – c. 380 BC
       works:
         - On the Murder of Eratosthenes
@@ -22,7 +22,7 @@
         - Against Epicrates and his Fellow-Envoys
 
     - author_name: 'Plato'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/plato.png
       years: 428/427 or 424/423 – 348/347 BC
       works:
         - Apology
@@ -38,7 +38,7 @@
         - Theaetetus
 
     - author_name: 'Lucian'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/lucian.jpg
       years: c. 125 – after 180 AD
       works:
         - The Dead Come to Life or The Fisherman
@@ -50,13 +50,13 @@
         - The Goddesse of Surrye
 
     - author_name: 'Herodotus'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/herodotus.jpg
       years: c. 484 – c. 425 BC
       works:
         - Histories
 
     - author_name: 'Sophocles'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/sophocles.jpg
       years: c. 497/6 – winter 406/5 BC
       works:
         - Ajax
@@ -64,7 +64,7 @@
         - Oedipus Rex
 
     - author_name: 'Aristophanes'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/aristophanes.jpg
       years: ca. 446 – ca. 386 BC
       works:
         - The Clouds
@@ -76,14 +76,14 @@
         - The Knights
 
     - author_name: 'Euripides'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/euripides.jpg
       years: ca. 480 – 406 BC
       works:
         - Medea
         - Hippolytus
 
     - author_name: 'Aeschylus'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/aeschylus.jpg
       years: c. 525/524 – c. 456/455 BC
       works:
         - Prometheus Bound
@@ -92,7 +92,7 @@
         - Agamemnon
 
     - author_name: 'Hippocrates'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+      image: images/hippocrates.jpg
       years: c. 460 – c. 370 BC
       works:
         - Hippocratic Oath
