@@ -11,27 +11,21 @@ permalink: /translations/
         </div>
         <div class="page-info-wrapper">
             <div class="page-info-languages">
-                <h2>Currently we have dictionaries in the following languages:</h2>
-                <ul>
-                    <li><a href="">Blalal - Sinolam</a></li>
-                    <li><a href="">Yaolaisdl - Konkihonki</a></li>
-                    <li><a href="">Pakshdkjasd - Banadal</a></li>
-                    <li><a href="">aksjdkjasd - Gfkahasjks</a></li>
-                    <li><a href="">KHGksahd - KHDShsadf</a></li>
-                </ul>
+                <h2>New translations of Lucian available</h2>
+                <p>We've added "The Dead Come to Life or The Fisherman", "The Double Indictment or Trials by Jury" and "The Dream or Lucian's Career".</p> 
             </div>
             <div class="page-info-general">
                 <div class="dict-banner-text">
                     <i class="fas fa-book"></i>
-                    <p>Our collection of over 20 fully digitized dictionaries with over 6000 lemmas in total.</p>
+                    <p>A collection of 10 authors and over 50 translated works, amounting to hundrets of pages.</p>
                 </div>
                 <div class="dict-banner-text">
-                    <i class="fas fa-search"></i>
-                    <p>The dictionaries are provided with a search engine, supporting search in three alphabets.</p>
+                    <i class="fas fa-book-open"></i>
+                    <p>Our collection is only Greek for now but we're working on expanding it with Latin authors.</p>
                 </div>
                 <div class="dict-banner-text">
                     <i class="fas fa-lock-open"></i>
-                    <p>Each dictionary can be accessed after you log in with your institution's e-mail address.</p>
+                    <p>Each translation can be accessed after you log in with your institution's e-mail address.</p>
                 </div>
             </div>
         </div>
@@ -42,7 +36,7 @@ permalink: /translations/
             <div class="translations-box {{ text_lang.language | slugify }}">
                 <div class="lang-section {{ text_lang.language | slugify }}">
                     <div class="lang-sec-logo">
-                        <img src="{{ text_lang.lang_image }}" alt="">
+                        <img src="{{ site.baseurl }}/{{ text_lang.lang_image }}" alt="">
                     </div>
                     <div class="lang-section-info">
                         <p>{{ text_lang.language }}</p>
@@ -88,5 +82,4 @@ permalink: /translations/
             </div>
         {% endfor %} 
     </div>
-
 </div>

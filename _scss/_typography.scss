@@ -1,7 +1,29 @@
 html {
     font: 15px/1.5 'Source Sans Pro', sans-serif;
+    @include large {
+        font-size: 16px;
+    }
+    @include tablet-small {
+        font-size: 14px;
+    }
+    @include phone-smaller {
+        font-size: 13px;
+    }
+    @include phone-vsmall {
+        font-size: 12px;
+    }
 }
 
 body, form, table, input, textarea, option, select, button {
     font: inherit;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    display: block;
+}
+

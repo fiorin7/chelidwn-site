@@ -13,11 +13,9 @@ permalink: /dictionaries/
             <div class="page-info-languages">
                 <h2>Currently we have dictionaries in the following languages:</h2>
                 <ul>
-                    <li><a href="">Blalal - Sinolam</a></li>
-                    <li><a href="">Yaolaisdl - Konkihonki</a></li>
-                    <li><a href="">Pakshdkjasd - Banadal</a></li>
-                    <li><a href="">aksjdkjasd - Gfkahasjks</a></li>
-                    <li><a href="">KHGksahd - KHDShsadf</a></li>
+                    {% for languages in site.data.dictionaries %}
+                    <li><a href="#{{ languages.language | slugify}}">{{ languages.language }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="page-info-general">
@@ -39,7 +37,7 @@ permalink: /dictionaries/
     <div class="dictionary-wrapper">       
         {% for languages in site.data.dictionaries %}
             <div class="dictionary-box">
-                <h2 class="language">{{ languages.language }}</h2>
+                <h2 class="language" id="{{ languages.language | slugify}}">{{ languages.language }}</h2>
                 <div class="buttons">
                         {% for dictionary in languages.dictionaries %}
                             <div class="button">
@@ -58,6 +56,7 @@ permalink: /dictionaries/
                         <div class="dict-main-item {{ dictionary.dictionary_name | slugify }}-main">
                             <div class="dict-data-item {{ dictionary.dictionary_name | slugify }}-dict">
                                 <div class="dict-data">
+                                    <h3>Dictionary Data</h3>
                                     {% for data in dictionary.dictionary_data %}
                                         {% for item in data %}
                                             <div class="info-pair {{ item[0] }}">
@@ -69,9 +68,10 @@ permalink: /dictionaries/
                                 </div>
                             </div>
                             <div class="dict-image-item {{ dictionary.dictionary_name | slugify }}-image">
-                                <img src="{{ dictionary.image }}" alt="">
+                                <img src="{{ site.baseurl }}/{{ dictionary.image }}" alt="">
                             </div>
                             <div class="proj-data-item {{ dictionary.dictionary_name | slugify }}-proj">
+                                <h3>Project Data</h3>
                                 {% for proj_data in dictionary.project_data %}
                                     {% for proj_item in proj_data %}
                                         <div class="info-pair {{ proj_item[0] }}">

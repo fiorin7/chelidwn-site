@@ -1,16 +1,27 @@
 .page-translations {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 72%, rgb(67, 122, 161) 28%);
     img {
         width: 10em;
     }
 }
 
+.page-translations {
+    .page-info {
+        .page-info-languages {
+            
+        }
+    }
+}
+
 .translations-box.greek {
-    max-width: 65em;
+    max-width: 70em;
     display: grid;
     grid-template-columns: 0.8fr 1fr 0.4fr 0.8fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.8fr 0.7fr 0.7fr;
     grid-gap: 1em;
-    margin: 5em auto;
+    margin: 5em auto 0;
+    padding-right: 6em;
+    padding-bottom: 6em;;
     & > div {
         display: flex;
         flex-direction: column;
@@ -35,6 +46,7 @@
             img {
                 width: auto;
                 height: 100%;
+                padding: 2.5em;
             }
         }
         .lang-section-info {
@@ -70,7 +82,7 @@
             content: "";
             position: absolute;
             top: 0; right: 0; bottom: 0; left: 0;
-            background-color: rgba($color: black, $alpha: 0.5);
+            background-color: rgba($color: black, $alpha: 0.4);
         }
         &:hover ul {
             opacity: 1;

@@ -1,5 +1,5 @@
 - language: Greek
-  lang_image: https://upload.wikimedia.org/wikipedia/commons/6/62/Greek_letter_omega_white.svg
+  lang_image: images/omega.png
   lang_info: 8th century BC - 2nd century BC
   authors:
     - author_name: 'Homer'
@@ -38,7 +38,7 @@
         - Theaetetus
 
     - author_name: 'Lucian'
-      image: images/lucian.jpg
+      image: images/lucian.png
       years: c. 125 – after 180 AD
       works:
         - The Dead Come to Life or The Fisherman
@@ -83,7 +83,7 @@
         - Hippolytus
 
     - author_name: 'Aeschylus'
-      image: images/aeschylus.jpg
+      image: images/aeschylus.png
       years: c. 525/524 – c. 456/455 BC
       works:
         - Prometheus Bound

@@ -1,122 +1,176 @@
 - language: Latin - Latin
   dictionaries:
-    - dictionary_name: 'One'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+    - dictionary_name: 'Forcellini'
+      image: images/forc.jpg
       project_data:
-        - start: start-date 1
-        - end: end-date 1
-        - team_size: 10 people
-        - institutions: institution 1
-      dictionary_data:
-        - author: author 1
-        - year: year 1
-        - lemma_count: entry-count 1
-        - page_count: page-count 1
-
-    - dictionary_name: 'Two'
-      image: https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
-      project_data:
-        - start: start-date 2
-        - end: end-date 2
+        - start: 3 April 2017
+        - end: 12 Dec 2019
         - team_size: 80 people
-        - institutions: institution 2
+        - institutions: SOUFFLE UNIVERSITY
       dictionary_data:
-        - author: author 2
-        - year: year 2
-        - lemma_count: entry-count 2
-        - page_count: page-count 2
+        - author: Egidio Forcellini
+        - year: 1771
+        - lemma_count: 50000
+        - page_count: 865
 
-    - dictionary_name: 'Three'
-      image: https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1153&q=80
+    - dictionary_name: 'Wagner'
+      image: images/wagner.png
       project_data:
-        - start: start-date 3
-        - end: end-date 3
-        - team_size: 803 people
-        - institutions: institution 3
+        - start: 5 May 2015
+        - end: 9 September 2017
+        - team_size: 14 people
+        - institutions: CHELIDWN
       dictionary_data:
-        - author: author 3
-        - year: year 3
-        - lemma_count: entry-count 3
-        - page_count: page-count 3
+        - author: Franc Wagner
+        - year: 1878
+        - lemma_count: 30768
+        - page_count: 572
+
+    - dictionary_name: 'DuCange'
+      image: images/ducange.png
+      project_data:
+        - start: 18 June 2017
+        - end: 4 November 2019
+        - team_size: 8 people
+        - institutions: SOME INSTITUTE
+      dictionary_data:
+        - author: Charles du Fresne
+        - year: 1682
+        - lemma_count: 40333
+        - page_count: 632
+
+    - dictionary_name: 'Gradus ad Parnassum'
+      image: images/parnass.jpg
+      project_data:
+        - start: 28 August 2015
+        - end: 3 December 2018
+        - team_size: 19 people
+        - institutions: SOME INSTITUTE
+      dictionary_data:
+        - author: Muzio Clementi
+        - year: 1870
+        - lemma_count: 20333
+        - page_count: 385
 
 - language: Latin - English
   dictionaries:
-    - dictionary_name: 'Ones'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+    - dictionary_name: 'Crollins'
+      image: images/collins.jpg
       project_data:
-        - start: start-date 1
-        - end: end-date 1
+        - start: 1 November 2011
+        - end: 7 December 2012
         - team_size: 10 people
-        - institutions: institution 1
+        - institutions: CHELIDWN
       dictionary_data:
-        - author: author 1
-        - year: year 1
-        - lemma_count: entry-count 1
-        - page_count: page-count 1
+        - author: Harper Collins
+        - year: 2006
+        - lemma_count: 10332
+        - page_count: 311
 
-    - dictionary_name: 'Twos'
-      image: https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+    - dictionary_name: 'Onxnford Latin Dictionary'
+      image: images/old.jpg
       project_data:
-        - start: start-date 2
-        - end: end-date 2
-        - team_size: 80 people
-        - institutions: institution 2
+        - start: 2 September 2015
+        - end: 9 January 2016
+        - team_size: 82 people
+        - institutions: SOME INSTITUTE
       dictionary_data:
-        - author: author 2
-        - year: year 2
-        - lemma_count: entry-count 2
-        - page_count: page-count 2
+        - author: P. Glarew 
+        - year: 1933
+        - lemma_count: 6832
+        - page_count: 628
 
-    - dictionary_name: 'Threes'
-      image: https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1153&q=80
+    - dictionary_name: 'Lerwis & Snort'
+      image: images/lsh.jpg
       project_data:
-        - start: start-date 3
-        - end: end-date 3
-        - team_size: 803 people
-        - institutions: institution 3
+        - start: 28 February 2016
+        - end: 3 March 2019
+        - team_size: 23 people
+        - institutions: SOUFFLE UNIVERSITY
       dictionary_data:
-        - author: author 3
-        - year: year 3
-        - lemma_count: entry-count 3
-        - page_count: page-count 3
+        - author: Charlton T. Lewis
+        - year: 1879
+        - lemma_count: 47638
+        - page_count: 763
 
 - language: Greek - Latin
   dictionaries:
-    - dictionary_name: 'Ones'
-      image: https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80
+    - dictionary_name: 'Hedericus'
+      image: images/old-book.jpg
       project_data:
-        - start: start-date 1
-        - end: end-date 1
-        - team_size: 10 people
-        - institutions: institution 1
+        - start: 8 April 2010
+        - end: 3 October 2017
+        - team_size: 60 people
+        - institutions: CHELIDWN
       dictionary_data:
-        - author: author 1
-        - year: year 1
-        - lemma_count: entry-count 1
-        - page_count: page-count 1
+        - author:  Benjamin Hedericus
+        - year: 1648
+        - lemma_count: 76345
+        - page_count: 654
 
-    - dictionary_name: 'Twos'
-      image: https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+    - dictionary_name: 'Schrevelius'
+      image: images/schr.jpg
       project_data:
-        - start: start-date 2
-        - end: end-date 2
+        - start: 25 January 2010
+        - end: 8 June 2010
         - team_size: 80 people
-        - institutions: institution 2
+        - institutions: SOME INSTITUTE
       dictionary_data:
-        - author: author 2
-        - year: year 2
-        - lemma_count: entry-count 2
-        - page_count: page-count 2
+        - author: Corneldius Schrevdelius
+        - year: 1646
+        - lemma_count: 75392
+        - page_count: 728
 
-    - dictionary_name: 'Threes'
-      image: https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1153&q=80
+- language: Greek - English
+  dictionaries:
+    - dictionary_name: 'LSJ'
+      image: images/lsj.jpg
       project_data:
-        - start: start-date 3
-        - end: end-date 3
-        - team_size: 803 people
-        - institutions: institution 3
+        - start: 30 March 2014
+        - end: 6 July 2015
+        - team_size: 17 people
+        - institutions: CHELIDWN
       dictionary_data:
-        - author: author 3
-        - year: year 3
-        - lemma_count: entry-count 3
-        - page_count: page-count 3
+        - author: Liddler Scotteur
+        - year: 1854
+        - lemma_count: 12865
+        - page_count: 653
+
+    - dictionary_name: 'Slatter'
+      image: images/old-book.jpg
+      project_data:
+        - start: 28 February 2016
+        - end: 3 March 2019
+        - team_size: 43 people
+        - institutions: SOUFFLE UNIVERSITY
+      dictionary_data:
+        - author: Merk Slatter
+        - year: 1725
+        - lemma_count: 456234
+        - page_count: 354
+
+    - dictionary_name: 'Aurtenrieth'
+      image: images/aur.jpg
+      project_data:
+        - start: 28 August 2015
+        - end: 3 December 2018
+        - team_size: 63 people
+        - institutions: SOME INSTITUTE
+      dictionary_data:
+        - author: Greekdude Aurtenrieth
+        - year: 1654
+        - lemma_count: 30233
+        - page_count: 936
+    
+    - dictionary_name: 'Camt Gleek Lexicon'
+      image: images/old-book.jpg
+      project_data:
+        - start: 21 May 2014
+        - end: 13 January 2015
+        - team_size: 32 people
+        - institutions: CHELIDWN
+      dictionary_data:
+        - author: Cambr Smith
+        - year: 2001
+        - lemma_count: 82732
+        - page_count: 2833

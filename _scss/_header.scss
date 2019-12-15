@@ -1,7 +1,7 @@
 .site-header {
     display: flex;
     align-items: center;
-    padding: 0.7em;
+    padding: 0.5em 0.7em;
     background-color: $main-color-dark;
     color: white;
     position: relative;
@@ -13,7 +13,7 @@
 
 .site-title {
     color: $main-color-light;
-    font-size: 1.7em;
+    font-size: 1.6em;
 }
 
 .site-logo {
@@ -59,27 +59,27 @@
 
 .site-nav {
     margin-left: 2em;
-    @include tablet {
-        display: none;
-        position: absolute;
-        top: 0; right: 0;
-        width: 100%;
-    }
+    // @include tablet {
+    //     display: none;
+    //     position: absolute;
+    //     top: 0; right: 0;
+    //     width: 100%;
+    // }
     
-    ul {
+    & > ul {
         display: flex;
         align-items: center;
-        @include tablet {
-            display: block;
-            position: absolute;
-            top: 5em; right: 0;
-            background-color: $main-color-dark;
-            z-index: 30;
-        }
-        @include phone-smaller {
-            right: 0; left: 0;
-            top: 11em;
-        }
+        // @include tablet {
+        //     display: block;
+        //     position: absolute;
+        //     top: 5em; right: 0;
+        //     background-color: $main-color-dark;
+        //     z-index: 30;
+        // }
+        // @include phone-smaller {
+        //     right: 0; left: 0;
+        //     top: 11em;
+        // }
         & ul {
             display: none;
             background-color: $main-color-dark;
@@ -90,14 +90,21 @@
             border-radius: 0.4rem;
             li {
                 &:first-of-type {
-                    margin-bottom: 0.6em;
+                    margin-bottom: 0.5em;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 1px;
+                    background: $main-color-light;
+                    transition: width .3s;
+                }
+                &:hover:after {
+                    width: 100%;
                 }
                 a {
-                    transition: color 0.2s ease-in;
-                    &:hover {
-                        text-decoration: underline;
-                        color: $main-color-lighter;
-                    }
+                    text-align: center;
                 }
             }
         }
@@ -105,15 +112,16 @@
     li {
         margin-left: 0.5em;
         position: relative;
-        @include tablet {
-            padding: 1em;
-        }
-        @include phone-smaller {
-            text-align: center;
-        }
+        // @include tablet {
+        //     padding: 1em;
+        // }
+        // @include phone-smaller {
+        //     text-align: center;
+        // }
         &:hover {
             & > ul {
-                display: block;
+                display: flex;
+                flex-direction: column;
                 z-index: 40;
             }
         }
@@ -128,6 +136,8 @@
         & > a {
         border-radius: 0.4em;
         transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+        z-index: 60;
+        position: relative;
             &:hover {
             background-color: $main-color-light;
             color: $main-color-dark;
@@ -146,19 +156,17 @@
     position: absolute;
     visibility: hidden;
     pointer-events: none;
-    @include tablet {
-        &:checked + .site-header .site-nav {
-            display: block;            
-        }
-    }
+    // @include tablet {
+    //     &:checked + .site-header .site-nav {
+    //         display: block;            
+    //     }
+    // }
 }
 
 .search {
     margin-left: auto;
     display: flex;
-    @include phone-smaller {
-        margin: 0;
-    }
+    
     .search-field {
         display: block;
         padding: 0.3em;
@@ -249,8 +257,12 @@
         border-radius: 0.4em;
         text-transform: uppercase;
         transition: background-color 0.35s ease-in-out;
-        &:hover {
-            background-color: $main-color-lighter;
+        border: 0.1em solid $main-color-light;
+        &:hover,
+        &:focus {
+            background-color: $main-color-dark;
+            color: $main-color-light;
+            border: 0.1em solid $main-color-light;
         }
     }
     

@@ -9,12 +9,19 @@ $color-green: rgb(100, 141, 103);
 
 // mix-ins
 $media-query-sizes: (
+    large: 1600px,
     tablet: 1025px,
     tablet-small: 960px,
     phone: 768px,
-    phone-smaller: 700px
+    phone-smaller: 700px,
+    phone-vsmall: 400px
 );
-    
+
+@mixin large() {
+    @media only screen and (min-width: #{map-get($media-query-sizes, "large")}) {
+        @content;
+    }
+}
 @mixin tablet() {
     @media only screen and (max-width: #{map-get($media-query-sizes, "tablet")}) {
         @content;
@@ -32,6 +39,11 @@ $media-query-sizes: (
 }
 @mixin phone-smaller() {
     @media only screen and (max-width: #{map-get($media-query-sizes, "phone")}) {
+        @content;
+    }
+}
+@mixin phone-vsmall() {
+    @media only screen and (max-width: #{map-get($media-query-sizes, "phone-vsmall")}) {
         @content;
     }
 }
