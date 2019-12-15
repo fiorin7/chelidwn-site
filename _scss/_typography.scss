@@ -6,7 +6,7 @@ html {
     @include tablet-small {
         font-size: 14px;
     }
-    @include phone-smaller {
+    @include phone-s {
         font-size: 13px;
     }
     @include phone-vsmall {

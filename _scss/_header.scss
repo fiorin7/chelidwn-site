@@ -5,7 +5,7 @@
     background-color: $main-color-dark;
     color: white;
     position: relative;
-    @include phone-smaller {
+    @include phone-s {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -21,9 +21,6 @@
     height: 3em;
     width: auto;
     padding-right: 1em;
-    @include phone-smaller {
-        padding: 0;
-    }
 }
 
 .site-description {
@@ -34,7 +31,7 @@
 .header-group {
     display: flex;
     flex-direction: column;
-    @include phone-smaller {
+    @include phone-s {
         flex-basis: 100%;
         justify-content: center;
         text-align: center;
@@ -59,49 +56,58 @@
 
 .site-nav {
     margin-left: 2em;
-    // @include tablet {
-    //     display: none;
-    //     position: absolute;
-    //     top: 0; right: 0;
-    //     width: 100%;
-    // }
+    @include tablet {
+        display: none;
+        position: absolute;
+        top: 0; right: 0;
+        width: 100%;
+    }
     
     & > ul {
         display: flex;
         align-items: center;
-        // @include tablet {
-        //     display: block;
-        //     position: absolute;
-        //     top: 5em; right: 0;
-        //     background-color: $main-color-dark;
-        //     z-index: 30;
-        // }
-        // @include phone-smaller {
-        //     right: 0; left: 0;
-        //     top: 11em;
-        // }
+        @include tablet {
+            display: block;
+            position: absolute;
+            top: 4em; right: 0;
+            background-color: $main-color-dark;
+            z-index: 30;
+        }
+        @include phone-s {
+            right: 0; left: 0;
+            top: 10em;
+        }
         & ul {
-            display: none;
+            @include desktop {
+                display: none;
             background-color: $main-color-dark;
             position: absolute;
             top: 1.4em; left: -1.5em;
             min-width: 100%;
             padding: 1em;
+            }
             border-radius: 0.4rem;
             li {
-                &:first-of-type {
-                    margin-bottom: 0.5em;
+                @include tablet {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 0.7em;
                 }
-                &:after {
-                    content: '';
-                    display: block;
-                    width: 0;
-                    height: 1px;
-                    background: $main-color-light;
-                    transition: width .3s;
-                }
-                &:hover:after {
-                    width: 100%;
+                @include desktop {
+                    &:first-of-type {
+                        margin-bottom: 0.5em;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background: $main-color-light;
+                        transition: width .3s;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
                 }
                 a {
                     text-align: center;
@@ -112,18 +118,18 @@
     li {
         margin-left: 0.5em;
         position: relative;
-        // @include tablet {
-        //     padding: 1em;
-        // }
-        // @include phone-smaller {
-        //     text-align: center;
-        // }
-        &:hover {
-            & > ul {
-                display: flex;
-                flex-direction: column;
-                z-index: 40;
-            }
+        @include tablet {
+            padding: 0.5em;
+        }
+        @include phone-s {
+            text-align: center;
+        }
+            &:hover {
+                & > ul {
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 40;
+                }
         }
     }
     a {
@@ -138,9 +144,11 @@
         transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
         z-index: 60;
         position: relative;
-            &:hover {
-            background-color: $main-color-light;
-            color: $main-color-dark;
+            @include desktop {
+                &:hover {
+                background-color: $main-color-light;
+                color: $main-color-dark;
+                }
             }
         }
         &:nth-of-type(2) > a {
@@ -156,17 +164,19 @@
     position: absolute;
     visibility: hidden;
     pointer-events: none;
-    // @include tablet {
-    //     &:checked + .site-header .site-nav {
-    //         display: block;            
-    //     }
-    // }
+    @include tablet {
+        &:checked + .site-header .site-nav {
+            display: block;            
+        }
+    }
 }
 
 .search {
     margin-left: auto;
     display: flex;
-    
+    @include phone-s {
+        margin: 0.2em 0;
+    }
     .search-field {
         display: block;
         padding: 0.3em;
@@ -183,7 +193,7 @@
         display: block;
         width: 2em;
         height: 1.4em;
-        border: 1px solid $main-color-light;
+        border: 0.1em solid $main-color-light;
         background-color: $main-color-light;
         text-align: center;
         color: $main-color-dark;
@@ -257,7 +267,7 @@
         border-radius: 0.4em;
         text-transform: uppercase;
         transition: background-color 0.35s ease-in-out;
-        border: 0.1em solid $main-color-light;
+        border: 0.1em solid $main-color-dark;
         &:hover,
         &:focus {
             background-color: $main-color-dark;
