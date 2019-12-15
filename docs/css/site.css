@@ -227,6 +227,9 @@ body {
     .new-text h1 {
       line-height: 1.2;
       margin-bottom: 0.3em; }
+      @media only screen and (max-width: 768px) {
+        .new-text h1 {
+          text-align: center; } }
     .new-text .date {
       font-style: italic; }
     @media only screen and (max-width: 1030px) {
@@ -629,7 +632,7 @@ footer {
           padding: 1em; } }
       @media only screen and (max-width: 1030px) {
         .site-nav > ul ul li {
-          margin: 0;
+          margin: 0 0 0;
           padding: 0;
           font-size: 0.7em; } }
       @media only screen and (min-width: 1026px) {
@@ -1076,8 +1079,8 @@ footer {
   grid-gap: 1em;
   margin: 5em auto 0;
   padding-right: 6em;
-  padding-bottom: 6em;
-  margin-left: 1em; }
+  padding-left: 1em;
+  padding-bottom: 6em; }
   @media only screen and (max-width: 1030px) {
     .translations-box.greek {
       padding-right: 0;
@@ -1169,6 +1172,9 @@ footer {
   .translations-box.greek .years {
     margin: 0.1em 0 2em;
     background-color: rgba(255, 255, 255, 0.8); }
+    @media only screen and (max-width: 577px) {
+      .translations-box.greek .years {
+        margin: 0.1em 0 0.3em; } }
   .translations-box.greek ul {
     margin: 0 auto;
     display: -webkit-box;
@@ -1194,6 +1200,10 @@ footer {
     transition: opacity 0.6s ease-in-out, transform 0.6s, -webkit-transform 0.6s;
     color: #502426;
     z-index: 20; }
+    @media only screen and (max-width: 577px) {
+      .translations-box.greek ul {
+        font-size: 0.8em;
+        line-height: 1.2; } }
   .translations-box.greek li {
     display: -webkit-box;
     display: flex;
@@ -1344,6 +1354,9 @@ footer {
       -webkit-box-align: center;
               align-items: center;
       margin: 0 0.2em 2em 0.2em; }
+      @media only screen and (max-width: 768px) {
+        .page-contributors .group-content ul li {
+          flex-basis: 47%; } }
       .page-contributors .group-content ul li h3 {
         width: 100%;
         text-align: left;
@@ -1352,6 +1365,9 @@ footer {
         padding: 0.5em 1em 0;
         border-radius: 0.2em;
         font-weight: 100; }
+        @media only screen and (max-width: 768px) {
+          .page-contributors .group-content ul li h3 {
+            text-align: center; } }
       .page-contributors .group-content ul li .status {
         color: #2b5f85;
         width: 100%;
@@ -1360,6 +1376,9 @@ footer {
         font-size: 1.2em;
         font-style: italic;
         text-align: left; }
+        @media only screen and (max-width: 768px) {
+          .page-contributors .group-content ul li .status {
+            text-align: center; } }
   .page-contributors .group-content .member-media {
     position: relative;
     bottom: -0.3em;
@@ -1370,6 +1389,14 @@ footer {
     border-radius: 0.4em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
     padding: 1em; }
+    @media only screen and (max-width: 1030px) {
+      .page-contributors .group-content .member-media {
+        min-width: 13em;
+        max-width: 15em; } }
+    @media only screen and (max-width: 960px) {
+      .page-contributors .group-content .member-media {
+        min-width: 11.5em;
+        max-width: 13.5em; } }
     .page-contributors .group-content .member-media:after {
       content: "";
       display: block;
